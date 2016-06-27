@@ -87,4 +87,106 @@
     
   </entry>
   
+  <entry>
+    <title>SOA之今天</title>
+    <link href="http://www.rocyuan.com/2016/SOA%E4%B9%8B%E4%BB%8A%E5%A4%A9/"/>
+    <id>http://www.rocyuan.com/2016/SOA之今天/</id>
+    <published>2016-06-01T12:44:00.000Z</published>
+    <updated>2016-06-27T06:36:58.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;后SOA之未来&quot;&gt;&lt;a href=&quot;#后SOA之未来&quot; class=&quot;headerlink&quot; title=&quot;后SOA之未来&quot;&gt;&lt;/a&gt;后SOA之未来&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;本文阐述的不仅仅是技术，更是一种思考方式，是哲学。&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&quot;历史&quot;&gt;&lt;a href=&quot;#历史&quot; class=&quot;headerlink&quot; title=&quot;历史&quot;&gt;&lt;/a&gt;历史&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;上一节，讲&lt;code&gt;哲学与历史&lt;/code&gt;的时候说过,系统的进化过程:&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/SystemArch.png&quot; alt=&quot;System&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/SOA1.png&quot; alt=&quot;SOA&quot;&gt;&lt;/p&gt;&lt;h2 id=&quot;SOA-发展&quot;&gt;&lt;a href=&quot;#SOA-发展&quot; class=&quot;headerlink&quot; title=&quot;SOA 发展&quot;&gt;&lt;/a&gt;SOA 发展&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;这个时候需要合理的划分服务,尽量以大模块服务和公共小服务。&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;何谓一个大模块服务呢?［以下均以Java系统为例子］&lt;br&gt;比如 coredb[UserDAO.java,MailDAO.java,MemberDAO.java.java….]作为一个CoreDBService服务,&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;业务X本来只想用下 UserDAO.java里的User信息,不巧却因为使用的是CoreDBService而看到了一堆其它的DAO模块…….(&lt;code&gt;有时候我可能根本不想被你看到&lt;/code&gt;－－－－&amp;gt; &lt;code&gt;这个时候，可能要再把UserService剥离出来了&lt;/code&gt;)&lt;/p&gt;&lt;p&gt;然后剥离后,现在&lt;strong&gt;业务B&lt;/strong&gt; 还是要查User信息,这个时候我们就去查询UserService这个微服务. 但是呢UserService的接口&lt;/p&gt;&lt;pre&gt;&lt;code&gt;interface UserService{
+   boolean createUser(User user);
+   boolean updateUser(User user);
+   boolean deleteUser(User user);
+   User selectUser(int id);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;本来呢，我只想要查，但是你却给了我增删查改的权力,&lt;br&gt;人一拥有权力就会犯错。&lt;br&gt;虽然说内部的人，我们一般是保持信任的，所谓用人不疑，疑人不用。都是内部系统，我就认可你操作所有服务和服务器的合法性。&lt;/p&gt;&lt;p&gt;但呢就要人有时候犯浑或犯贱，我明明不给你这么多操作，你不就没有机会去犯错吗，为什么要在系统里留下一个隐患呢，这个时候是否可以考虑下 改变下服务调用的方式？&lt;br&gt;eg:&lt;br&gt;假如是这样调用的&lt;br&gt;{&lt;br&gt;“service”:“UserService”,&lt;br&gt;“method”:”queryById”,&lt;br&gt;“params”:”2001001”&lt;/p&gt;&lt;p&gt;}&lt;br&gt;那么对&lt;strong&gt;业务B&lt;/strong&gt; 来说 我只给你上面一个json串去调用获取你需要的User信息，你就不知道如何更新与删除，而避免一些不必要的事情.&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;这种情况感觉是这公司得多大啊，要防到这种地步,也没见人这么做过，这里只是提供一种思路或偏见。&lt;/p&gt;&lt;/blockquote&gt;&lt;h2 id=&quot;SOA-灾难&quot;&gt;&lt;a href=&quot;#SOA-灾难&quot; class=&quot;headerlink&quot; title=&quot;SOA 灾难&quot;&gt;&lt;/a&gt;SOA 灾难&lt;/h2&gt;&lt;p&gt;唉 全奈自己动不动就要把这抽离出来，业务越多越杂，要抽离的就越细化，服务就越多&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;我们需要明确一点: 服务分的越标准 越精细 耦合越小,服务数量越多.这一点是理所当然的,&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;strong&gt;&lt;em&gt;但人性是贪婪的, 我们往往既想服务或系统间的耦合越小越好，又不想服务的数量变得旁多无比，我告诉你 这是 “不可能的[1]”&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;&lt;h3 id=&quot;接下来就会发生：&quot;&gt;&lt;a href=&quot;#接下来就会发生：&quot; class=&quot;headerlink&quot; title=&quot;接下来就会发生：&quot;&gt;&lt;/a&gt;接下来就会发生：&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;服务爆炸（太多）&lt;/li&gt;&lt;li&gt;内存爆炸 (消耗太多)&lt;/li&gt;&lt;/ol&gt;&lt;h3 id=&quot;那么解决方案就是：&quot;&gt;&lt;a href=&quot;#那么解决方案就是：&quot; class=&quot;headerlink&quot; title=&quot;那么解决方案就是：&quot;&gt;&lt;/a&gt;那么解决方案就是：&lt;/h3&gt;&lt;ol&gt;&lt;li&gt;&lt;p&gt;买机器。&lt;/p&gt;&lt;p&gt;钱的问题，就不说了。&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;或者 想办法省内存.&lt;/p&gt;&lt;p&gt;以Java系统为例,各个服务中有一堆jar包都是一样的,比如common-lang,druid,json等jar包, 这些在各个系统里反复加载多次，可以考虑加载一次，一个机器上的所有服务共享，参见classloader加载类的原理，应该是可以做到的。&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;&lt;h3 id=&quot;但是呢，服务耦合小，服务数量又不会太夸张，真的做不到吗？&quot;&gt;&lt;a href=&quot;#但是呢，服务耦合小，服务数量又不会太夸张，真的做不到吗？&quot; class=&quot;headerlink&quot; title=&quot;但是呢，服务耦合小，服务数量又不会太夸张，真的做不到吗？&quot;&gt;&lt;/a&gt;但是呢，服务耦合小，服务数量又不会太夸张，真的做不到吗？&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;我想起一个伟大的哲学家曾经说过： 看起来合理的事，反过来也必须合理。如果不合理那么就是概念有问题，或者是思路不对，或者思考的角度不对。因为没有生病所以健康，那么正式因为生病所以健康也是合理的。&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;我们曾在纠结 在&lt;code&gt;业务&lt;/code&gt;里分&lt;code&gt;MVC&lt;/code&gt;好呢，还是&lt;code&gt;MVC&lt;/code&gt;里划分&lt;code&gt;业务&lt;/code&gt;好呢，这里你说怎么好就好，你说怎么不好就不好，我们之所以无法解决这个问题，或许一直是思考的角度不对，抽象点来说这是一个&lt;code&gt;二维&lt;/code&gt;世界里的矛盾，后来出现了&lt;code&gt;RPC和SOA&lt;/code&gt;这种三维产物 将MVC与业务整在一起抽离成服务提供出来。&lt;/p&gt;&lt;p&gt;但现在SOA的这种矛盾，是在&lt;code&gt;三维&lt;/code&gt;世界里的，是不是应该有个&lt;code&gt;四维&lt;/code&gt;的什么东西来解决SOA里的矛盾呢，&lt;/p&gt;&lt;p&gt;这个四维应该是包含了三维的服务属性 ＋ ？？？？&lt;/p&gt;&lt;p&gt;向后看一片迷茫，往前看（ALL IN ONE）所有东西都揉杂在一起的原始系统。。。。。。联想到当前还算火热的新新事物Docker,&lt;br&gt;我不经冒出一个奇怪的念想：&lt;/p&gt;&lt;h2 id=&quot;幻想中的四维世界：&quot;&gt;&lt;a href=&quot;#幻想中的四维世界：&quot; class=&quot;headerlink&quot; title=&quot;幻想中的四维世界：&quot;&gt;&lt;/a&gt;幻想中的四维世界：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/Zhuan11111111111111111111.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;&lt;p&gt;各个服务更像是组成容器的组件,服务在容器内部单独部署，不同容器之间的同一个服务互不关联互不影响。&lt;/p&gt;&lt;p&gt;更有一种 容器即系统的概念。&lt;br&gt;定义一个系统所需要的服务组建和组建之间的关联与耦合，来创建容器或者叫做一个系统。&lt;/p&gt;&lt;p&gt;每一次组件（服务）的更新，各个容器（系统）都需要重新构建一次，重启一个重启的整个生命周期。完全强耦合。&lt;/p&gt;&lt;p&gt;根据哲学推论，正是因为耦合越来越低，所以耦合强应该可能会成为它新的一维的条件。&lt;/p&gt;&lt;p&gt;以上权当胡说九道，只是一种思考问题的方式。&lt;/p&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;后SOA之未来&quot;&gt;&lt;a href=&quot;#后SOA之未来&quot; class=&quot;headerlink&quot; title=&quot;后SOA之未来&quot;&gt;&lt;/a&gt;后SOA之未来&lt;/h1&gt;&lt;blockquote&gt;&lt;p&gt;本文阐述的不仅仅是技术，更是一种思考方式，是哲学。&lt;/p&gt;&lt;/blockqu
+    
+    </summary>
+    
+      <category term="dubbo" scheme="http://www.rocyuan.com/categories/dubbo/"/>
+    
+    
+      <category term="dubbo" scheme="http://www.rocyuan.com/tags/dubbo/"/>
+    
+      <category term="soa" scheme="http://www.rocyuan.com/tags/soa/"/>
+    
+      <category term="service" scheme="http://www.rocyuan.com/tags/service/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>短域名实现推广效果统计</title>
+    <link href="http://www.rocyuan.com/2016/%E7%9F%AD%E5%9F%9F%E5%90%8D%E5%AE%9E%E7%8E%B0%E6%8E%A8%E5%B9%BF%E6%95%88%E6%9E%9C%E7%BB%9F%E8%AE%A1/"/>
+    <id>http://www.rocyuan.com/2016/短域名实现推广效果统计/</id>
+    <published>2016-05-27T16:43:00.000Z</published>
+    <updated>2016-06-27T17:22:57.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;短域名&quot;&gt;&lt;a href=&quot;#短域名&quot; class=&quot;headerlink&quot; title=&quot;短域名&quot;&gt;&lt;/a&gt;短域名&lt;/h1&gt;&lt;h2 id=&quot;标签（空格分隔）：短域名&quot;&gt;&lt;a href=&quot;#标签（空格分隔）：短域名&quot; class=&quot;headerlink&quot; title=&quot;标签（空格分隔）：短域名 &quot;&gt;&lt;/a&gt;标签（空格分隔）：短域名&lt;/h2&gt;&lt;h1 id=&quot;有那些短域名服务&quot;&gt;&lt;a href=&quot;#有那些短域名服务&quot; class=&quot;headerlink&quot; title=&quot;有那些短域名服务&quot;&gt;&lt;/a&gt;有那些短域名服务&lt;/h1&gt;&lt;h2 id=&quot;【1】-google-短链接：&quot;&gt;&lt;a href=&quot;#【1】-google-短链接：&quot; class=&quot;headerlink&quot; title=&quot;【1】    google 短链接：&quot;&gt;&lt;/a&gt;【1】 google 短链接：&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;goo.gl
+* 识别出浏览器（chrome,safari）和系统（Mac ,还是window）的点击次数
+
+安装插件 短链接生成分享插件  快速生成和分享短链接（一键分享到各大社交分享平台）
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Chrome插件地址： &lt;a href=&quot;https://chrome.google.com/webstore/detail/googl-url-shortener/iblijlcdoidgdpfknkckljiocdbnlagk&quot; title=&quot;https://chrome.google.com/webstore/detail/googl-url-shortener/iblijlcdoidgdpfknkckljiocdbnlagk&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://chrome.google.com/webstore/detail/googl-url-shortener/iblijlcdoidgdpfknkckljiocdbnlagk&lt;/a&gt;&lt;br&gt;使用步骤： 1 登陆google浏览器账户 2 添加facebook授权&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/QQ20160416-2.png&quot; alt=&quot;google短域名&quot;&gt;&lt;/p&gt;&lt;p&gt;##【2】全球最大的短链接服务： &lt;a href=&quot;https://app.bitly.com/bitlinks/1SIehcH#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://app.bitly.com/bitlinks/1SIehcH#&lt;/a&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;facebook 访问多少次 地理位置多少次 （看不到 客户端和系统信息）&lt;/li&gt;&lt;li&gt;可以直接分享到 facebook账户，分享的内容也比自己发布的友好&lt;/li&gt;&lt;/ul&gt;&lt;hr&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/QQ20160416-1.png&quot; alt=&quot;短域名服务效果&quot;&gt;&lt;/p&gt;&lt;h1 id=&quot;同一商品-不同人的推广效果跟踪&quot;&gt;&lt;a href=&quot;#同一商品-不同人的推广效果跟踪&quot; class=&quot;headerlink&quot; title=&quot;同一商品 不同人的推广效果跟踪&quot;&gt;&lt;/a&gt;同一商品 不同人的推广效果跟踪&lt;/h1&gt;&lt;pre&gt;&lt;code&gt; 通过参数不同 还可以检测到 同一个商品不同的人的推广效果（哪个网红的推广的点击量高，次数多？？）
+通过特定参数的不同可以进行不同的测试
+
+例如 
+https://xxxxus.com/collections/girls/products/t-2?from=tt
+https://xxxxxlus.com/collections/girls/products/t-2?from=rocyuan 
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;短域名&quot;&gt;&lt;a href=&quot;#短域名&quot; class=&quot;headerlink&quot; title=&quot;短域名&quot;&gt;&lt;/a&gt;短域名&lt;/h1&gt;&lt;h2 id=&quot;标签（空格分隔）：短域名&quot;&gt;&lt;a href=&quot;#标签（空格分隔）：短域名&quot; class=&quot;headerlink&quot; titl
+    
+    </summary>
+    
+    
+      <category term="短域名" scheme="http://www.rocyuan.com/tags/%E7%9F%AD%E5%9F%9F%E5%90%8D/"/>
+    
+      <category term="推广" scheme="http://www.rocyuan.com/tags/%E6%8E%A8%E5%B9%BF/"/>
+    
+      <category term="电商" scheme="http://www.rocyuan.com/tags/%E7%94%B5%E5%95%86/"/>
+    
+      <category term="goo.gl" scheme="http://www.rocyuan.com/tags/goo-gl/"/>
+    
+      <category term="bitly" scheme="http://www.rocyuan.com/tags/bitly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信自动抢红包</title>
+    <link href="http://www.rocyuan.com/2015/%E5%BE%AE%E4%BF%A1%E8%87%AA%E5%8A%A8%E6%8A%A2%E7%BA%A2%E5%8C%85/"/>
+    <id>http://www.rocyuan.com/2015/微信自动抢红包/</id>
+    <published>2015-11-26T12:54:00.000Z</published>
+    <updated>2016-06-27T06:37:13.000Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;微信自动抢红包教程（有图有真相）&quot;&gt;&lt;a href=&quot;#微信自动抢红包教程（有图有真相）&quot; class=&quot;headerlink&quot; title=&quot;微信自动抢红包教程（有图有真相）&quot;&gt;&lt;/a&gt;微信自动抢红包教程（有图有真相）&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： wechat 红包&lt;/p&gt;&lt;hr&gt;&lt;p&gt;#微信自动抢红包教程（有图有真相）&lt;br&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/demo.gif&quot; alt=&quot;抢红包&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;code&gt;步骤很简单装2个app&lt;/code&gt;&lt;br&gt;1 xposed&lt;br&gt;2 xposed插件 luckmoney&lt;/p&gt;&lt;h2 id=&quot;详细步骤&quot;&gt;&lt;a href=&quot;#详细步骤&quot; class=&quot;headerlink&quot; title=&quot;详细步骤:&quot;&gt;&lt;/a&gt;详细步骤:&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;1 手机是Android&lt;/li&gt;&lt;li&gt;2 将 手机root&lt;/li&gt;&lt;li&gt;3 安装 xposed &lt;a href=&quot;http://repo.xposed.info/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://repo.xposed.info/&lt;/a&gt;&lt;/li&gt;&lt;li&gt;4 安装luckeymoney 下载地址 &lt;a href=&quot;http://repo.xposed.info/module/com.xfunforx.luckymoney&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://repo.xposed.info/module/com.xfunforx.luckymoney&lt;/a&gt;&lt;br&gt;安装1.x版&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;友情提示&quot;&gt;&lt;a href=&quot;#友情提示&quot; class=&quot;headerlink&quot; title=&quot;友情提示&quot;&gt;&lt;/a&gt;友情提示&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;小米系统慎用,因为小米之所以能那么自由的各种插件各种美化各种定制，是因为改造的xposed,你再装xposed难以预料是否会生效，免得时间花费的徒劳&lt;/li&gt;&lt;li&gt;Android6.0 的系统 xposed官网找不到的话，网上找 alph4版本 ， 下载地址： &lt;a href=&quot;http://pan.baidu.com/s/1jGOE8su&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;点击下载&lt;/a&gt;&lt;/li&gt;&lt;li&gt;刷第三方recovery时 找到对应CPU型号的32位还是64位，我早先也不知道这么麻烦,庆幸得大神指点迅速找到了 我需要的那个，网上教程和下载的也很多&lt;/li&gt;&lt;li&gt;如果你有安卓开发环境 请将sdk目录下的plantform-tool设置为环境变量,没有就按网上的教程来，百度都搜得到:&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;小白的话-按下面的方式去做：&quot;&gt;&lt;a href=&quot;#小白的话-按下面的方式去做：&quot; class=&quot;headerlink&quot; title=&quot;小白的话,按下面的方式去做：&quot;&gt;&lt;/a&gt;小白的话,按下面的方式去做：&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;1.问度娘 ： XX手机（你的手机型号）xposed安装教程。&lt;/li&gt;&lt;li&gt;2.安装完后 在xposed里的插件搜索里输入 “luckeymoney”。&lt;/li&gt;&lt;li&gt;3.重启手机。&lt;/li&gt;&lt;li&gt;4.大功告成。&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;code&gt;赞助&lt;/code&gt;&lt;/p&gt;&lt;p&gt;admin@rocyuan.com&lt;/p&gt;&lt;ul&gt;&lt;li&gt;公众号：&lt;br&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/qrcode_for_gh_ee75564456c8_430.jpg&quot; alt=&quot;wechat_pub&quot;&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/alipay_money.jpg&quot; alt=&quot;alipay&quot;&gt;&lt;br&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/wechat_money.png&quot; alt=&quot;wechat&quot;&gt;&lt;/p&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;微信自动抢红包教程（有图有真相）&quot;&gt;&lt;a href=&quot;#微信自动抢红包教程（有图有真相）&quot; class=&quot;headerlink&quot; title=&quot;微信自动抢红包教程（有图有真相）&quot;&gt;&lt;/a&gt;微信自动抢红包教程（有图有真相）&lt;/h1&gt;&lt;p&gt;标签（空格分隔）： wech
+    
+    </summary>
+    
+      <category term="we chat" scheme="http://www.rocyuan.com/categories/we-chat/"/>
+    
+      <category term="hack" scheme="http://www.rocyuan.com/categories/we-chat/hack/"/>
+    
+    
+      <category term="wechat" scheme="http://www.rocyuan.com/tags/wechat/"/>
+    
+      <category term="weixin" scheme="http://www.rocyuan.com/tags/weixin/"/>
+    
+      <category term="微信" scheme="http://www.rocyuan.com/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+      <category term="红包" scheme="http://www.rocyuan.com/tags/%E7%BA%A2%E5%8C%85/"/>
+    
+      <category term="过年" scheme="http://www.rocyuan.com/tags/%E8%BF%87%E5%B9%B4/"/>
+    
+  </entry>
+  
 </feed>
