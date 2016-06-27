@@ -75,13 +75,13 @@
     
       <category term="dubbo" scheme="http://www.rocyuan.com/tags/dubbo/"/>
     
-      <category term="soa" scheme="http://www.rocyuan.com/tags/soa/"/>
+      <category term="api" scheme="http://www.rocyuan.com/tags/api/"/>
     
       <category term="service" scheme="http://www.rocyuan.com/tags/service/"/>
     
-      <category term="api" scheme="http://www.rocyuan.com/tags/api/"/>
-    
       <category term="java" scheme="http://www.rocyuan.com/tags/java/"/>
+    
+      <category term="soa" scheme="http://www.rocyuan.com/tags/soa/"/>
     
       <category term="rpc" scheme="http://www.rocyuan.com/tags/rpc/"/>
     
