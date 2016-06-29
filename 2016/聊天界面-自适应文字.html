@@ -18,19 +18,24 @@
 <meta name="description" content="rocyuan blog 是一个为哲学而生的博客，一切是为了艺术">
 
 
-<meta name="description" content="快速书写dubbo服务 与 API项目what这是 一个用来快速生成dubbo项目或者 使用dubbo来些 api的模版项目, 可以帮你节约80%的开发时间why1个命令帮你在20秒构件一个完整的项目,再也不用花时间去搭建项目，找各种依赖,里面还帮你自动 加入了developer-commons包,dubbo2.8.4,zk的包, dubbo的本地配置 和 正式的配置子模块清晰明了的分模块结构 和">
+<meta name="description" content="该篇文章主要介绍一个实现聊天界面的思路过程，源码可以在 源码链接 获得，该工程实现聊天的基本功能，功能还不够完善，欢迎大家提PR，效果图如下所示我希望通过相对简单的方式实现界面的布局，没有复杂的计算达到自适应的效果。###iOS8新功能介绍虽然self size cell最终没有在我的工程中用到，但是这是我曾经挖过的坑，所以在此做了简单的介绍。在iOS 8 中，UITableView新增一项功能">
 <meta property="og:type" content="article">
-<meta property="og:title" content="快速书写dubbo服务 与 API项目">
-<meta property="og:url" content="http://www.rocyuan.com/2016/SOA今天.html">
+<meta property="og:title" content="聊天界面-自适应文字">
+<meta property="og:url" content="http://www.rocyuan.com/2016/聊天界面-自适应文字.html">
 <meta property="og:site_name" content="rocyuan">
-<meta property="og:description" content="快速书写dubbo服务 与 API项目what这是 一个用来快速生成dubbo项目或者 使用dubbo来些 api的模版项目, 可以帮你节约80%的开发时间why1个命令帮你在20秒构件一个完整的项目,再也不用花时间去搭建项目，找各种依赖,里面还帮你自动 加入了developer-commons包,dubbo2.8.4,zk的包, dubbo的本地配置 和 正式的配置子模块清晰明了的分模块结构 和">
-<meta property="og:image" content="http://7xogqz.com1.z0.glb.clouddn.com/QQ20160128-1.png">
-<meta property="og:image" content="http://7xogqz.com1.z0.glb.clouddn.com/xxservice.png">
-<meta property="og:updated_time" content="2016-06-26T12:39:56.000Z">
+<meta property="og:description" content="该篇文章主要介绍一个实现聊天界面的思路过程，源码可以在 源码链接 获得，该工程实现聊天的基本功能，功能还不够完善，欢迎大家提PR，效果图如下所示我希望通过相对简单的方式实现界面的布局，没有复杂的计算达到自适应的效果。###iOS8新功能介绍虽然self size cell最终没有在我的工程中用到，但是这是我曾经挖过的坑，所以在此做了简单的介绍。在iOS 8 中，UITableView新增一项功能">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1745132-62757d971433980e.png?imageMogr2/auto-orient/strip%7CimageView2/2">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1745132-6ba96779c7c36981.png?imageMogr2/auto-orient/strip%7CimageView2/2">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1745132-dcf96675cc3b7552.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1745132-050b976c3f639dd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1745132-1414c92c2bb98f65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1745132-b5c6e26c0de3b20d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1745132-e3b7bb735e7348ef.gif?imageMogr2/auto-orient/strip">
+<meta property="og:updated_time" content="2016-06-29T13:00:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="快速书写dubbo服务 与 API项目">
-<meta name="twitter:description" content="快速书写dubbo服务 与 API项目what这是 一个用来快速生成dubbo项目或者 使用dubbo来些 api的模版项目, 可以帮你节约80%的开发时间why1个命令帮你在20秒构件一个完整的项目,再也不用花时间去搭建项目，找各种依赖,里面还帮你自动 加入了developer-commons包,dubbo2.8.4,zk的包, dubbo的本地配置 和 正式的配置子模块清晰明了的分模块结构 和">
-<meta name="twitter:image" content="http://7xogqz.com1.z0.glb.clouddn.com/QQ20160128-1.png">
+<meta name="twitter:title" content="聊天界面-自适应文字">
+<meta name="twitter:description" content="该篇文章主要介绍一个实现聊天界面的思路过程，源码可以在 源码链接 获得，该工程实现聊天的基本功能，功能还不够完善，欢迎大家提PR，效果图如下所示我希望通过相对简单的方式实现界面的布局，没有复杂的计算达到自适应的效果。###iOS8新功能介绍虽然self size cell最终没有在我的工程中用到，但是这是我曾经挖过的坑，所以在此做了简单的介绍。在iOS 8 中，UITableView新增一项功能">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1745132-62757d971433980e.png?imageMogr2/auto-orient/strip%7CimageView2/2">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -62,7 +67,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>快速书写dubbo服务 与 API项目 | rocyuan</title>
+<title>聊天界面-自适应文字 | rocyuan</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -278,11 +283,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-SOA今天" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-聊天界面-自适应文字" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/SOA今天.html" class="article-date">
-      <time datetime="2016-06-19T19:39:00.000Z" itemprop="datePublished">2016-06-20</time>
+      <a href="/2016/聊天界面-自适应文字.html" class="article-date">
+      <time datetime="2016-05-30T12:50:00.000Z" itemprop="datePublished">2016-05-30</time>
 </a>
     </div>
   
@@ -295,7 +300,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      快速书写dubbo服务 与 API项目
+      聊天界面-自适应文字
     </h1>
   
 
@@ -303,14 +308,10 @@
       
       <div class="article-info article-info-post">
         
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/dubbo/">dubbo</a>
-    </div>
-
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/api/">api</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dubbo/">dubbo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rpc/">rpc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/service/">service</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/soa/">soa</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/UITableView/">UITableView</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -320,7 +321,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="快速书写dubbo服务-与-API项目"><a href="#快速书写dubbo服务-与-API项目" class="headerlink" title="快速书写dubbo服务 与 API项目"></a>快速书写dubbo服务 与 API项目</h1><h2 id="what"><a href="#what" class="headerlink" title="what"></a>what</h2><blockquote><p>这是 一个用来快速生成dubbo项目或者 使用dubbo来些 api的模版项目, 可以帮你节约<code>80%</code>的开发时间</p></blockquote><h2 id="why"><a href="#why" class="headerlink" title="why"></a>why</h2><ul><li>1个命令帮你在<code>20秒</code>构件一个完整的项目,再也不用花时间去搭建项目，找各种依赖,里面还帮你自动 加入了developer-commons包,dubbo2.8.4,zk的包, dubbo的本地配置 和 正式的配置</li><li>子模块清晰明了的分模块结构 和 demo,让你即使不会dubbo 也可以快速完成你的业务服务</li><li>完善的打包方式。 考虑到各种情况, 此生成项目可以打出各种包，<ul><li>最小的jar,</li><li>包含所有jar文件的可执行jar包,</li><li>将jar文件和配置文件分开的压缩包(<code>推荐方式</code>)</li><li>可以让第三种方式快速发布的最小压缩包包</li></ul></li><li>完善的运行发布安装脚本<ul><li>一键发布接口的脚本</li><li>修复了dubbo官方脚本里在我们服务器出现的问题的,启动,暂停,重启脚本</li><li>配合我们现在使用的supervisor的启动服务脚本</li><li>还有一个本地发布脚本（需要配置免密登录,改写）</li></ul></li></ul><ul><li>最重的一点:<blockquote><p>里面有我引以为傲的 API异常码的一种设计思路,将 异常与APICode结合的设计思路, 少了你一些在API设计过程中的 if else 和校验之类的<code>杂质</code>出现在你的项目里，强烈推荐使用,demo或者说是这个模版项目的原型在<a href="http://*********/portal/portal-services" title="portal-service" target="_blank" rel="external">portal-service</a> ,源码在git@ssh-<em>**</em>.com:portal/portal-services.git</p></blockquote></li></ul><h2 id="how"><a href="#how" class="headerlink" title="how"></a>how</h2><ul><li>在终端下执行</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mvn archetype:generate -DgroupId=cn.jpush -DartifactId=xx-service -Dpackage=你的包名  -DarchetypeVersion=1.0.0 -DarchetypeArtifactId=dubbox-service-archetype -DarchetypeGroupId=cn.jpush -DinteractiveMode=false</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> mvn archetype:generate -DgroupId=cn.jpush -DartifactId=xx-service -Dpackage=cn.jpush.xx  -DarchetypeVersion=1.0.0 -DarchetypeArtifactId=dubbox-service-archetype -DarchetypeGroupId=cn.jpush -DinteractiveMode=false</span><br></pre></td></tr></table></figure><ul><li><p>在IDE里面生成项目</p><p>IDEA:<br><img src="http://7xogqz.com1.z0.glb.clouddn.com/QQ20160128-1.png" alt="1"></p></li></ul><h2 id="end"><a href="#end" class="headerlink" title="end"></a>end</h2><p><img src="http://7xogqz.com1.z0.glb.clouddn.com/xxservice.png" alt="2"></p>
+        <p>该篇文章主要介绍一个实现聊天界面的思路过程，源码可以在 <a href="https://github.com/jpush/jchat-swift" target="_blank" rel="external">源码链接</a> 获得，该工程实现聊天的基本功能，功能还不够完善，欢迎大家提PR，效果图如下所示</p><p><img src="http://upload-images.jianshu.io/upload_images/1745132-62757d971433980e.png?imageMogr2/auto-orient/strip%7CimageView2/2" alt=""></p><p><img src="http://upload-images.jianshu.io/upload_images/1745132-6ba96779c7c36981.png?imageMogr2/auto-orient/strip%7CimageView2/2" alt=""></p><p>我希望通过相对简单的方式实现界面的布局，没有复杂的计算达到自适应的效果。</p><p>###iOS8新功能介绍<br>虽然self size cell最终没有在我的工程中用到，但是这是我曾经挖过的坑，所以在此做了简单的介绍。</p><p>在iOS 8 中，UITableView新增一项功能 self size cells，这是一项通过 UITableViewCell 的约束自动自动计算UITableView contentSize 的技术。这个新特性给我们带来两个个好处。</p><ul><li>我们不再需要为了自适应文字，去计算每个cell 中文字所需要的高度。</li><li>而且有更高的性能。(因为UITableView每次reloadData的时候都会重新计算 cell 的高度，意味着如果有1万个 cell 要展示，需要 调用heightForRowAtIndexPath一万次，这效率是特别低的)</li></ul><p>我们通过一个简单的demo来介绍一下 Self Size Cells 的用法，<a href="https://github.com/huangminlinux/demo/tree/master/iOS8/selfSizeCellDemo" target="_blank" rel="external">demo 源码</a><br>效果如图<br><img src="http://upload-images.jianshu.io/upload_images/1745132-dcf96675cc3b7552.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>######使用步骤是</p><ul><li>为UITableViewCell添加约束</li><li>设置UITableView 的estimatedRowHeight属性</li><li>设置 rowHeight为 UITableViewAutomaticDimension</li><li>有一点需要注意，代码中不能实现heightForRowAtIndexPath 这个方法<br>添加约束，有一个原则是，除了自适应text的高度不需要约束外，需要确定所有必要约束<br><img src="http://upload-images.jianshu.io/upload_images/1745132-050b976c3f639dd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></li></ul><p>用代码来说就是(这里用到第三方库 SnapKit 做代码约束 <a href="https://github.com/SnapKit/SnapKit" target="_blank" rel="external">SnapKit 传送门</a>)<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">textview.snp_makeConstraints&#123; (make)in</span><br><span class="line">  make.top.equalTo(self.contentView).offset(15)</span><br><span class="line">  make.width.equalTo(100)</span><br><span class="line">  make.left.equalTo(self.contentView).offset(15)</span><br><span class="line">  make.bottom.equalTo(self.contentView).offset(-15)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p><p>对于UILabel 来说还需要把numberOfLines置为0<br>然后设置UITableView的必要属性<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">messageTable.estimatedRowHeight=44</span><br><span class="line">messageTable.rowHeight=UITableViewAutomaticDimension</span><br></pre></td></tr></table></figure><p></p><p>以上便是，使用self size cell 的所有步骤。</p><p>###实战篇<br>接下来便是实战部分，我希望在聊天页面中使用self size cell 这个功能，聊天页面的效果图<br><img src="http://upload-images.jianshu.io/upload_images/1745132-1414c92c2bb98f65.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>以下下是我为messageCell 制作约束图，事实上用的是代码约束，详情可以查看我的源码<br><img src="http://upload-images.jianshu.io/upload_images/1745132-b5c6e26c0de3b20d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p><p>#####问题</p><p>如果我想实现 一个功能像微信一样下拉刷新，而且消息停留在原来的消息页面上，如下图所示<br><img src="http://upload-images.jianshu.io/upload_images/1745132-e3b7bb735e7348ef.gif?imageMogr2/auto-orient/strip" alt=""></p><p>分析：在刷新数据后 调用tableview.reloadData 方法，可以刷新tableview 显示的数据，不过tableview 会滚动到最顶部。幸运的是tableView是UIScrollView的子类，如果我们改变了内容，contentSize 这个属性一定会改变，也就是说系统一定会掉用contentSize的set方法。如果我们重新这个set 方法，在每次掉用setContentSize 的时候计算出之前视窗所在的位置，并且在设置完contentSize后移动到计算号的位置，就能平滑的上拉加载更多的历史消息了。</p><p>下面是实现平滑滚动的关键代码<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">@objc(JChatMessageTable)</span><br><span class="line">class JChatMessageTable: UITableView &#123;</span><br><span class="line">  var isFlashToLoad:Bool! = false</span><br><span class="line">  </span><br><span class="line">  override var contentSize: CGSize &#123;</span><br><span class="line">    didSet &#123;</span><br><span class="line">        if self.isFlashToLoad != false &#123;</span><br><span class="line">          if !CGSizeEqualToSize(self.contentSize, CGSizeZero) &#123;</span><br><span class="line">            if oldValue.height &lt; self.contentSize.height &#123;</span><br><span class="line">              var offset = self.contentOffset</span><br><span class="line">              offset.y = self.contentSize.height - oldValue.height</span><br><span class="line">              self.contentOffset = offset</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">          self.isFlashToLoad = false</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  override init(frame: CGRect, style: UITableViewStyle) &#123;</span><br><span class="line">    super.init(frame: frame, style: style)</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  required init?(coder aDecoder: NSCoder) &#123;</span><br><span class="line">      fatalError(&quot;init(coder:) has not been implemented&quot;)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  func loadMoreMessage() &#123;</span><br><span class="line">    self.isFlashToLoad = true</span><br><span class="line">    self.reloadData()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p></p><p>想法是好的，但是现实总是残酷的，在具体实行的时候出现了一个新的问题，因为我用的是Self size cell 来自适应UITableView的contentSize的， Self size cell 在处理UITableView 的contentSize时候并不是一次性赋值成功的，它是每5个点的增加height(contentSize.height)，直到合适的高度位置, 也就是说 contentSize的 Set 方法会被掉用很多次，而且上面的代码完全没有作用（可以想象结果是只有最后一次掉用contentSize的Set方法起到了作用小于5个点的偏移量，由于这个变化真的很小，我也是在这个地方被坑了一次），由于 Self size cells 的这个特性，似乎很难实现这个功能。</p><p>此时我果断放弃了使用Self Size Cells ，虽然比较心痛，不过我们大致了解了Self size cell 是如何自适应高度的。<br>self size cell 主要给我们带来两个好处</p><ul><li>能够得到更高的执行效率</li><li>我们不需要为文字的frame进行复杂的计算 ，只需要设置width的约束和位置，就能够得到自适应的Size</li></ul><p>由于messageTable 消息的展示是通过分页加载消息的方式，第一次只会添加20条的消息，也就不会出现调用heightForRowAtIndexPath时间过长的卡顿问题。但是如果用户不断的下拉刷新heightForRowAtIndexPath的执行时间也会出现线性的增加，所以为了减少这方面的时间开支，我们在每次成功加载一个新的cell 的时候把高度缓存起来，这样就可以减少计算的时间，每次只需要计算新展现的历史消息高度就可以了。</p><ul><li>第一个问题经过分析我们可以通过缓存高度的方式提高性能.</li></ul><ul><li>对于第二点，也是最重要的一点，如何不通过手动计算获得UITableViewCell所需要的高度，经过分析发现UITableViewCell 有一个方法systemLayoutSizeFittingSize可以计算返回自身的高度，所以我接下来生成一个全局的UITableViewCell 用于计算UITableViewCell 的高度这样我们就不需要手动计算Cell的高度了。通过<figure class="highlight plain"><figcaption><span>+ 1//这里的 +1 是为了弥补分隔线的高度</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">返回的高度就是UITableView所需要的高度。</span><br><span class="line"></span><br><span class="line">###自适应输入框</span><br><span class="line">接下来，我们需要实现如下图的效果，输入框能够自适应输入文字的大小JChatInputView</span><br><span class="line"></span><br><span class="line">![](http://upload-images.jianshu.io/upload_images/1745132-07ba07f00c4d5ee2.gif?imageMogr2/auto-orient/strip)我们需要输入框能够自适应文本的大小，我们</span><br><span class="line"></span><br><span class="line">![](http://upload-images.jianshu.io/upload_images/1745132-1702af46ba8d4b32.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</span><br><span class="line"></span><br><span class="line">需要给TextView 添加如下约束</span><br></pre></td></tr></table></figure></li></ul><p>inputTextView?.snp_makeConstraints(closure: { (make) -&gt;Voidin<br>make.right.equalTo(self.showMoreBtn.snp_left).offset(-5)<br>make.left.equalTo(self.switchBtn.snp_right).offset(5)<br>make.top.equalTo(inputWrapView).offset(5)<br>make.bottom.equalTo(inputWrapView).offset(-5)<br>make.height.greaterThanOrEqualTo(30)<br>make.height.lessThanOrEqualTo(100)<br>})<br></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inputWarpView 添加如下约束。不需要添加高度约束， 因为inputWarpView的高度由TextView 的高度和其他约束计算得出</span><br></pre></td></tr></table></figure><p></p><p>inputTextView?.snp_makeConstraints(closure: { (make) -&gt;Voidin<br>make.right.bottom.left.equalTo(superView)<br>})<br>```<br>到此介绍了一个聊天界面的自适应UI部分，灵活的使用约束可以减少大量的代码。</p>
       
     </div>
     
@@ -328,13 +329,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/SOA今天.html">快速书写dubbo服务 与 API项目</a></p>
+        <p><span>本文标题:</span><a href="/2016/聊天界面-自适应文字.html">聊天界面-自适应文字</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">rocyuan</a></p>
-        <p><span>发布时间:</span>2016-06-20, 03:39:00</p>
-        <p><span>最后更新:</span>2016-06-26, 20:39:56</p>
+        <p><span>发布时间:</span>2016-05-30, 20:50:00</p>
+        <p><span>最后更新:</span>2016-06-29, 21:00:39</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/SOA今天.html" title="快速书写dubbo服务 与 API项目">http://www.rocyuan.com/2016/SOA今天.html</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.rocyuan.com/2016/SOA今天.html　　作者: rocyuan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/聊天界面-自适应文字.html" title="聊天界面-自适应文字">http://www.rocyuan.com/2016/聊天界面-自适应文字.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.rocyuan.com/2016/聊天界面-自适应文字.html　　作者: rocyuan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -347,15 +348,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/SOA的发展与毁灭.html">
-                    SOA的发展与毁灭
+                <a href="/2016/SOA之今天.html">
+                    SOA之今天
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/SOA之今天.html">
-                    SOA之今天
+                <a href="/2016/短域名实现推广效果统计.html">
+                    短域名实现推广效果统计
                 </a>
             </div>
         
@@ -366,7 +367,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#快速书写dubbo服务-与-API项目"><span class="toc-number">1.</span> <span class="toc-text">快速书写dubbo服务 与 API项目</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#what"><span class="toc-number">1.1.</span> <span class="toc-text">what</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#why"><span class="toc-number">1.2.</span> <span class="toc-text">why</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#how"><span class="toc-number">1.3.</span> <span class="toc-text">how</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#end"><span class="toc-number">1.4.</span> <span class="toc-text">end</span></a></li></ol></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn,
@@ -397,7 +398,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"快速书写dubbo服务 与 API项目　| rocyuan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"聊天界面-自适应文字　| rocyuan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -425,7 +426,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/SOA的发展与毁灭.html" title="上一篇: SOA的发展与毁灭">
+            <a href="/2016/SOA之今天.html" title="上一篇: SOA之今天">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -433,7 +434,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/SOA之今天.html" title="下一篇: SOA之今天">
+            <a href="/2016/短域名实现推广效果统计.html" title="下一篇: 短域名实现推广效果统计">
                 <i class="fa fa-angle-right"></i>
             </a>
         
