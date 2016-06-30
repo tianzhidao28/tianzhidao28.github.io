@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.rocyuan.com/"/>
-  <updated>2016-06-29T10:48:02.000Z</updated>
+  <updated>2016-06-30T06:30:30.000Z</updated>
   <id>http://www.rocyuan.com/</id>
   
   <author>
@@ -14,6 +14,48 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IDEA2016.1版激活(亲测)</title>
+    <link href="http://www.rocyuan.com/2016/IDEA2016-1%E7%89%88%E6%BF%80%E6%B4%BB-%E4%BA%B2%E6%B5%8B.html"/>
+    <id>http://www.rocyuan.com/2016/IDEA2016-1版激活-亲测.html</id>
+    <published>2016-06-30T06:29:00.000Z</published>
+    <updated>2016-06-30T06:30:30.000Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;&lt;p&gt;IDEA 2016.1&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;a href=&quot;http://idea.qinxi1992.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://idea.qinxi1992.cn&lt;/a&gt;&lt;/p&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;&lt;p&gt;IDEA 2016.1&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;a href=&quot;http://idea.qinxi1992.cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://idea.qinxi1992.cn&lt;/a&gt;
+    
+    </summary>
+    
+      <category term="工具" scheme="http://www.rocyuan.com/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="IDEA" scheme="http://www.rocyuan.com/tags/IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[S]Shell中断信号</title>
+    <link href="http://www.rocyuan.com/2016/S-Shell%E4%B8%AD%E6%96%AD%E4%BF%A1%E5%8F%B7.html"/>
+    <id>http://www.rocyuan.com/2016/S-Shell中断信号.html</id>
+    <published>2016-06-29T14:51:00.000Z</published>
+    <updated>2016-06-29T14:54:01.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;信号常量&quot;&gt;&lt;a href=&quot;#信号常量&quot; class=&quot;headerlink&quot; title=&quot;信号常量&quot;&gt;&lt;/a&gt;信号常量&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;SIGHUP 终止进程 终端线路挂断&lt;/li&gt;&lt;li&gt;SIGINT 终止进程 中断进程&lt;/li&gt;&lt;li&gt;SIGQUIT 建立CORE文件 终止进程，并且生成core文件&lt;/li&gt;&lt;li&gt;SIGILL 建立CORE文件 非法指令&lt;/li&gt;&lt;li&gt;SIGTRAP 建立CORE文件 跟踪自陷&lt;/li&gt;&lt;li&gt;SIGBUS 建立CORE文件 总线错误&lt;/li&gt;&lt;li&gt;SIGSEGV 建立CORE文件 段非法错误&lt;/li&gt;&lt;li&gt;SIGFPE 建立CORE文件 浮点异常&lt;/li&gt;&lt;li&gt;SIGIOT 建立CORE文件 执行I/O自陷&lt;/li&gt;&lt;li&gt;SIGKILL 终止进程 杀死进程&lt;/li&gt;&lt;li&gt;SIGPIPE 终止进程 向一个没有读进程的管道写数据&lt;/li&gt;&lt;li&gt;SIGALARM 终止进程 计时器到时&lt;/li&gt;&lt;li&gt;SIGTERM 终止进程 软件终止信号&lt;/li&gt;&lt;li&gt;SIGSTOP 停止进程 非终端来的停止信号&lt;/li&gt;&lt;li&gt;SIGTSTP 停止进程 终端来的停止信号&lt;/li&gt;&lt;li&gt;SIGCONT 忽略信号 继续执行一个停止的进程&lt;/li&gt;&lt;li&gt;SIGURG 忽略信号 I/O紧急信号&lt;/li&gt;&lt;li&gt;SIGIO 忽略信号 描述符上可以进行I/O&lt;/li&gt;&lt;li&gt;SIGCHLD 忽略信号 当子进程停止或退出时通知父进程&lt;/li&gt;&lt;li&gt;SIGTTOU 停止进程 后台进程写终端&lt;/li&gt;&lt;li&gt;SIGTTIN 停止进程 后台进程读终端&lt;/li&gt;&lt;li&gt;SIGXGPU 终止进程 CPU时限超时&lt;/li&gt;&lt;li&gt;SIGXFSZ 终止进程 文件长度过长&lt;/li&gt;&lt;li&gt;SIGWINCH 忽略信号 窗口大小发生变化&lt;/li&gt;&lt;li&gt;SIGPROF 终止进程 统计分布图用计时器到时&lt;/li&gt;&lt;li&gt;SIGUSR1 终止进程 用户定义信号1&lt;/li&gt;&lt;li&gt;SIGUSR2 终止进程 用户定义信号2&lt;/li&gt;&lt;li&gt;SIGVTALRM 终止进程 虚拟计时器到时&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;在Bash下调用信号的方法为：&lt;br&gt;代码:&lt;br&gt;trap command/function sig1 sig2 …&lt;/p&gt;&lt;/blockquote&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;信号常量&quot;&gt;&lt;a href=&quot;#信号常量&quot; class=&quot;headerlink&quot; title=&quot;信号常量&quot;&gt;&lt;/a&gt;信号常量&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;SIGHUP 终止进程 终端线路挂断&lt;/li&gt;&lt;li&gt;SIGINT 终止进程 中断进程&lt;/li&gt;&lt;li&gt;SIGQU
+    
+    </summary>
+    
+    
+      <category term="shell" scheme="http://www.rocyuan.com/tags/shell/"/>
+    
+  </entry>
   
   <entry>
     <title>WorkLog20160629</title>
