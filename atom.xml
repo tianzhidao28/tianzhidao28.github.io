@@ -163,13 +163,13 @@
     
       <category term="dubbo" scheme="http://www.rocyuan.com/tags/dubbo/"/>
     
-      <category term="api" scheme="http://www.rocyuan.com/tags/api/"/>
+      <category term="soa" scheme="http://www.rocyuan.com/tags/soa/"/>
     
       <category term="service" scheme="http://www.rocyuan.com/tags/service/"/>
     
-      <category term="java" scheme="http://www.rocyuan.com/tags/java/"/>
+      <category term="api" scheme="http://www.rocyuan.com/tags/api/"/>
     
-      <category term="soa" scheme="http://www.rocyuan.com/tags/soa/"/>
+      <category term="java" scheme="http://www.rocyuan.com/tags/java/"/>
     
       <category term="rpc" scheme="http://www.rocyuan.com/tags/rpc/"/>
     
@@ -201,9 +201,9 @@
     
       <category term="dubbo" scheme="http://www.rocyuan.com/tags/dubbo/"/>
     
-      <category term="service" scheme="http://www.rocyuan.com/tags/service/"/>
-    
       <category term="soa" scheme="http://www.rocyuan.com/tags/soa/"/>
+    
+      <category term="service" scheme="http://www.rocyuan.com/tags/service/"/>
     
   </entry>
   
