@@ -20,16 +20,18 @@
 <meta name="description" content="rocyuan blog 是一个为哲学而生的博客，一切是为了艺术">
 
 
-<meta name="description" content="json to bean :">
+<meta name="description" content="备份数据1mysqldump -urocyuan  -p123456 --all-databases &amp;gt; /tmp/all.sql查看已安装版本1rpm -qa|grep mysql安装一，wget http://dev.mysql.com/get/mysql57-community-release-el6-8.noarch.rpm二，yum localinstall mysql57-com">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用代码写代码">
-<meta property="og:url" content="http://www.rocyuan.com/2016/用代码写代码.html">
+<meta property="og:title" content="mysql升级-从5.1到5.6全过程">
+<meta property="og:url" content="http://www.rocyuan.com/2016/mysql升级-从5-1到5-6全过程.html">
 <meta property="og:site_name" content="rocyuan">
-<meta property="og:description" content="json to bean :">
-<meta property="og:updated_time" content="2016-07-05T05:40:28.000Z">
+<meta property="og:description" content="备份数据1mysqldump -urocyuan  -p123456 --all-databases &amp;gt; /tmp/all.sql查看已安装版本1rpm -qa|grep mysql安装一，wget http://dev.mysql.com/get/mysql57-community-release-el6-8.noarch.rpm二，yum localinstall mysql57-com">
+<meta property="og:image" content="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160715_153047QQ20160715-2.png?watermark/2/text/d3d3LnJvY3l1YW4uY29t/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0FDMzMzMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10">
+<meta property="og:updated_time" content="2016-07-17T18:19:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用代码写代码">
-<meta name="twitter:description" content="json to bean :">
+<meta name="twitter:title" content="mysql升级-从5.1到5.6全过程">
+<meta name="twitter:description" content="备份数据1mysqldump -urocyuan  -p123456 --all-databases &amp;gt; /tmp/all.sql查看已安装版本1rpm -qa|grep mysql安装一，wget http://dev.mysql.com/get/mysql57-community-release-el6-8.noarch.rpm二，yum localinstall mysql57-com">
+<meta name="twitter:image" content="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160715_153047QQ20160715-2.png?watermark/2/text/d3d3LnJvY3l1YW4uY29t/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0FDMzMzMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -61,7 +63,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>用代码写代码 | rocyuan</title>
+<title>mysql升级-从5.1到5.6全过程 | rocyuan</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -280,11 +282,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-用代码写代码" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-mysql升级-从5-1到5-6全过程" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/用代码写代码.html" class="article-date">
-      <time datetime="2016-07-05T03:29:18.000Z" itemprop="datePublished">2016-07-05</time>
+      <a href="/2016/mysql升级-从5-1到5-6全过程.html" class="article-date">
+      <time datetime="2016-07-15T07:29:21.000Z" itemprop="datePublished">2016-07-15</time>
 </a>
     </div>
   
@@ -297,7 +299,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      用代码写代码
+      mysql升级-从5.1到5.6全过程
     </h1>
   
 
@@ -314,7 +316,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ul><li>json to bean :</li></ul>
+        <h2 id="备份数据"><a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqldump -urocyuan  -p123456 --all-databases &gt; /tmp/all.sql</span><br></pre></td></tr></table></figure><h2 id="查看已安装版本"><a href="#查看已安装版本" class="headerlink" title="查看已安装版本"></a>查看已安装版本</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa|grep mysql</span><br></pre></td></tr></table></figure><p><img src="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160715_153047QQ20160715-2.png?watermark/2/text/d3d3LnJvY3l1YW4uY29t/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0FDMzMzMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="QQ20160715-2.png"></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li>一，wget <a href="http://dev.mysql.com/get/mysql57-community-release-el6-8.noarch.rpm" target="_blank" rel="external">http://dev.mysql.com/get/mysql57-community-release-el6-8.noarch.rpm</a></li><li>二，yum localinstall mysql57-community-release-el6-8.noarch.rpm</li><li>三，yum install mysql-server</li><li>四， mysqld –initialize –user=mysql</li><li>五，找到密码 vi /var/log/mysqld.log</li><li>六，修改密码service mysqld start ; mysqladmin -uroot -p password<br>采用拷贝粘贴，输入旧密码，设定新密码</li><li>七，chkconfig mysqld on</li><li>八，reboot</li><li>九，mysql -uroot -p</li></ul>
       
     </div>
     
@@ -322,13 +324,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/用代码写代码.html">用代码写代码</a></p>
+        <p><span>本文标题:</span><a href="/2016/mysql升级-从5-1到5-6全过程.html">mysql升级-从5.1到5.6全过程</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">rocyuan</a></p>
-        <p><span>发布时间:</span>2016-07-05, 11:29:18</p>
-        <p><span>最后更新:</span>2016-07-05, 13:40:28</p>
+        <p><span>发布时间:</span>2016-07-15, 15:29:21</p>
+        <p><span>最后更新:</span>2016-07-18, 02:19:20</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/用代码写代码.html" title="用代码写代码">http://www.rocyuan.com/2016/用代码写代码.html</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.rocyuan.com/2016/用代码写代码.html　　作者: rocyuan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/mysql升级-从5-1到5-6全过程.html" title="mysql升级-从5.1到5.6全过程">http://www.rocyuan.com/2016/mysql升级-从5-1到5-6全过程.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.rocyuan.com/2016/mysql升级-从5-1到5-6全过程.html　　作者: rocyuan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -341,15 +343,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/Mac-Cli.html">
-                    [转]Mac-Cli
+                <a href="/2016/CentOS下shadowsocks-libev一键安装脚本.html">
+                    CentOS下shadowsocks-libev一键安装脚本
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/工具收录.html">
-                    工具收录
+                <a href="/2016/看到天朝的下载速度，我笑了.html">
+                    看到天朝的下载速度，我笑了
                 </a>
             </div>
         
@@ -360,7 +362,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#备份数据"><span class="toc-number">1.</span> <span class="toc-text">备份数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#查看已安装版本"><span class="toc-number">2.</span> <span class="toc-text">查看已安装版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">3.</span> <span class="toc-text">安装</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -391,7 +393,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"用代码写代码　| rocyuan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"mysql升级-从5.1到5.6全过程　| rocyuan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -407,7 +409,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/用代码写代码.html" data-title="用代码写代码" data-url="http://www.rocyuan.com/2016/用代码写代码.html"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/mysql升级-从5-1到5-6全过程.html" data-title="mysql升级-从5.1到5.6全过程" data-url="http://www.rocyuan.com/2016/mysql升级-从5-1到5-6全过程.html"></div>
     <script>
         var duoshuoQuery = {short_name:"rocyuan"};
         var loadComment = function(){
@@ -431,7 +433,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/Mac-Cli.html" title="上一篇: [转]Mac-Cli">
+            <a href="/2016/CentOS下shadowsocks-libev一键安装脚本.html" title="上一篇: CentOS下shadowsocks-libev一键安装脚本">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -439,7 +441,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/工具收录.html" title="下一篇: 工具收录">
+            <a href="/2016/看到天朝的下载速度，我笑了.html" title="下一篇: 看到天朝的下载速度，我笑了">
                 <i class="fa fa-angle-right"></i>
             </a>
         

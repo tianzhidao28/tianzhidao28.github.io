@@ -20,16 +20,16 @@
 <meta name="description" content="rocyuan blog 是一个为哲学而生的博客，一切是为了艺术">
 
 
-<meta name="description" content="json to bean :">
+<meta name="description" content="安装root登录1234wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.shchmod +x shadowsocks-libev.sh./shadowsocks-libev.sh 2&amp;gt;&amp;amp;1 | tee">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用代码写代码">
-<meta property="og:url" content="http://www.rocyuan.com/2016/用代码写代码.html">
+<meta property="og:title" content="CentOS下shadowsocks-libev一键安装脚本">
+<meta property="og:url" content="http://www.rocyuan.com/2016/CentOS下shadowsocks-libev一键安装脚本.html">
 <meta property="og:site_name" content="rocyuan">
-<meta property="og:description" content="json to bean :">
-<meta property="og:updated_time" content="2016-07-05T05:40:28.000Z">
+<meta property="og:description" content="安装root登录1234wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.shchmod +x shadowsocks-libev.sh./shadowsocks-libev.sh 2&amp;gt;&amp;amp;1 | tee">
+<meta property="og:updated_time" content="2016-07-17T18:18:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用代码写代码">
-<meta name="twitter:description" content="json to bean :">
+<meta name="twitter:title" content="CentOS下shadowsocks-libev一键安装脚本">
+<meta name="twitter:description" content="安装root登录1234wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.shchmod +x shadowsocks-libev.sh./shadowsocks-libev.sh 2&amp;gt;&amp;amp;1 | tee">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -61,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>用代码写代码 | rocyuan</title>
+<title>CentOS下shadowsocks-libev一键安装脚本 | rocyuan</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -280,11 +280,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-用代码写代码" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-CentOS下shadowsocks-libev一键安装脚本" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/用代码写代码.html" class="article-date">
-      <time datetime="2016-07-05T03:29:18.000Z" itemprop="datePublished">2016-07-05</time>
+      <a href="/2016/CentOS下shadowsocks-libev一键安装脚本.html" class="article-date">
+      <time datetime="2016-07-17T18:07:14.000Z" itemprop="datePublished">2016-07-18</time>
 </a>
     </div>
   
@@ -297,7 +297,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      用代码写代码
+      CentOS下shadowsocks-libev一键安装脚本
     </h1>
   
 
@@ -314,7 +314,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <ul><li>json to bean :</li></ul>
+        <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li>root登录</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-libev.sh</span><br><span class="line">chmod +x shadowsocks-libev.sh</span><br><span class="line">./shadowsocks-libev.sh 2&gt;&amp;1 | tee shadowsocks-libev.log</span><br></pre></td></tr></table></figure><h2 id="检测运行"><a href="#检测运行" class="headerlink" title="检测运行"></a>检测运行</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep ss-server | grep -v ps | grep -v grep</span><br><span class="line">可以查看进程是否存在。</span><br><span class="line">本脚本安装完成后，会将 shadowsocks-libev 加入开机自启动。</span><br></pre></td></tr></table></figure><h2 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">使用命令：</span><br><span class="line">启动：/etc/init.d/shadowsocks start</span><br><span class="line">停止：/etc/init.d/shadowsocks stop</span><br><span class="line">重启：/etc/init.d/shadowsocks restart</span><br><span class="line">查看状态：/etc/init.d/shadowsocks status</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -322,13 +322,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/用代码写代码.html">用代码写代码</a></p>
+        <p><span>本文标题:</span><a href="/2016/CentOS下shadowsocks-libev一键安装脚本.html">CentOS下shadowsocks-libev一键安装脚本</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">rocyuan</a></p>
-        <p><span>发布时间:</span>2016-07-05, 11:29:18</p>
-        <p><span>最后更新:</span>2016-07-05, 13:40:28</p>
+        <p><span>发布时间:</span>2016-07-18, 02:07:14</p>
+        <p><span>最后更新:</span>2016-07-18, 02:18:25</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/用代码写代码.html" title="用代码写代码">http://www.rocyuan.com/2016/用代码写代码.html</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.rocyuan.com/2016/用代码写代码.html　　作者: rocyuan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/CentOS下shadowsocks-libev一键安装脚本.html" title="CentOS下shadowsocks-libev一键安装脚本">http://www.rocyuan.com/2016/CentOS下shadowsocks-libev一键安装脚本.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.rocyuan.com/2016/CentOS下shadowsocks-libev一键安装脚本.html　　作者: rocyuan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -340,16 +340,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/Mac-Cli.html">
-                    [转]Mac-Cli
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/工具收录.html">
-                    工具收录
+                <a href="/2016/mysql升级-从5-1到5-6全过程.html">
+                    mysql升级-从5.1到5.6全过程
                 </a>
             </div>
         
@@ -360,7 +354,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#检测运行"><span class="toc-number">2.</span> <span class="toc-text">检测运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用命令"><span class="toc-number">3.</span> <span class="toc-text">使用命令</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn,
@@ -391,7 +385,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"用代码写代码　| rocyuan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"CentOS下shadowsocks-libev一键安装脚本　| rocyuan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -407,7 +401,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/用代码写代码.html" data-title="用代码写代码" data-url="http://www.rocyuan.com/2016/用代码写代码.html"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/CentOS下shadowsocks-libev一键安装脚本.html" data-title="CentOS下shadowsocks-libev一键安装脚本" data-url="http://www.rocyuan.com/2016/CentOS下shadowsocks-libev一键安装脚本.html"></div>
     <script>
         var duoshuoQuery = {short_name:"rocyuan"};
         var loadComment = function(){
@@ -431,15 +425,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/Mac-Cli.html" title="上一篇: [转]Mac-Cli">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/工具收录.html" title="下一篇: 工具收录">
+            <a href="/2016/mysql升级-从5-1到5-6全过程.html" title="下一篇: mysql升级-从5.1到5.6全过程">
                 <i class="fa fa-angle-right"></i>
             </a>
         
