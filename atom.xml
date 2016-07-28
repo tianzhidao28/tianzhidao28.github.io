@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.rocyuan.com/"/>
-  <updated>2016-07-20T17:13:59.000Z</updated>
+  <updated>2016-07-28T15:59:30.000Z</updated>
   <id>http://www.rocyuan.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac自定义一个通知命令</title>
+    <link href="http://www.rocyuan.com/2016/Mac%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%80%E4%B8%AA%E9%80%9A%E7%9F%A5%E5%91%BD%E4%BB%A4.html"/>
+    <id>http://www.rocyuan.com/2016/Mac自定义一个通知命令.html</id>
+    <published>2016-07-28T15:56:49.000Z</published>
+    <updated>2016-07-28T15:59:30.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;从终端里享受掉💰的声音&quot;&gt;&lt;a href=&quot;#从终端里享受掉💰的声音&quot; class=&quot;headerlink&quot; title=&quot;从终端里享受掉💰的声音&quot;&gt;&lt;/a&gt;从终端里享受掉💰的声音&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160728_235535notify.png?watermark/2/text/d3d3LnJvY3l1YW4uY29t/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0FDMzMzMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10&quot; alt=&quot;notify.png&quot;&gt;&lt;/p&gt;&lt;h2 id=&quot;notify&quot;&gt;&lt;a href=&quot;#notify&quot; class=&quot;headerlink&quot; title=&quot;notify&quot;&gt;&lt;/a&gt;notify&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;代码如下&lt;/li&gt;&lt;/ul&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;notify()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [ $# -lt 1 ] &amp;amp;&amp;amp; exit 1 || content=&amp;quot;$1&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [ $# -eq 2 ] &amp;amp;&amp;amp; title=&amp;quot;$2&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [ -z &amp;quot;$title&amp;quot; ] &amp;amp;&amp;amp; title=&amp;quot;Notification&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    /usr/bin/osascript &amp;lt;&amp;lt; EOF&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;display notification &amp;quot;$&amp;#123;content&amp;#125;&amp;quot; with title &amp;quot;$&amp;#123;title&amp;#125;&amp;quot; sound name &amp;quot;coins&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;EOF&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;* ~/Library/Sounds 里放声音素材&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;从终端里享受掉💰的声音&quot;&gt;&lt;a href=&quot;#从终端里享受掉💰的声音&quot; class=&quot;headerlink&quot; title=&quot;从终端里享受掉💰的声音&quot;&gt;&lt;/a&gt;从终端里享受掉💰的声音&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>win7一键环境变量设置</title>
@@ -27,6 +45,24 @@
     <summary type="html">
     
       &lt;h2 id=&quot;曾经win7上使用的bat脚本环境设置&quot;&gt;&lt;a href=&quot;#曾经win7上使用的bat脚本环境设置&quot; class=&quot;headerlink&quot; title=&quot;曾经win7上使用的bat脚本环境设置&quot;&gt;&lt;/a&gt;曾经win7上使用的bat脚本环境设置&lt;/h2&gt;&lt;figu
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Macbook破解无线密码</title>
+    <link href="http://www.rocyuan.com/2016/Macbook%E7%A0%B4%E8%A7%A3%E6%97%A0%E7%BA%BF%E5%AF%86%E7%A0%81.html"/>
+    <id>http://www.rocyuan.com/2016/Macbook破解无线密码.html</id>
+    <published>2016-07-18T05:58:13.000Z</published>
+    <updated>2016-07-28T16:06:06.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;再找一个攻击 别人wifi使其断开自动重连的工具就好了&lt;/p&gt;&lt;/blockquote&gt;&lt;ul&gt;&lt;li&gt;brew install aircrack-ng&lt;/li&gt;&lt;li&gt;&lt;p&gt;macbook自带了一个wifi工具：airport&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160729_000305airport.png?watermark/2/text/d3d3LnJvY3l1YW4uY29t/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0FDMzMzMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10&quot; alt=&quot;airport.png&quot;&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport en0 sniff 1&lt;/li&gt;&lt;/ul&gt;&lt;ul&gt;&lt;li&gt;&lt;p&gt;/tmp/ 下面会有cap文件&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;aircrack-ng -w /usr/local/hack/dict.txt -b c0:61:18:44:5a:e0 /tmp/*.cap&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;工具&quot;&gt;&lt;a href=&quot;#工具&quot; class=&quot;headerlink&quot; title=&quot;工具&quot;&gt;&lt;/a&gt;工具&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;再找一个攻击 别人wifi使其断开自动重连的工具就好了&lt;/p&gt;&lt;/blockquote&gt;&lt;ul&gt;&lt;li&gt;brew i
     
     </summary>
     
@@ -355,44 +391,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;mysqldump-参数&quot;&gt;&lt;a href=&quot;#mysqldump-参数&quot; class=&quot;headerlink&quot; title=&quot;mysqldump 参数&quot;&gt;&lt;/a&gt;mysqldump 参数&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;–no-autocommit&lt;/li&gt;&lt;li&gt;–n
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>[S]Shell中断信号</title>
-    <link href="http://www.rocyuan.com/2016/S-Shell%E4%B8%AD%E6%96%AD%E4%BF%A1%E5%8F%B7.html"/>
-    <id>http://www.rocyuan.com/2016/S-Shell中断信号.html</id>
-    <published>2016-06-29T14:51:00.000Z</published>
-    <updated>2016-06-29T14:54:01.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;信号常量&quot;&gt;&lt;a href=&quot;#信号常量&quot; class=&quot;headerlink&quot; title=&quot;信号常量&quot;&gt;&lt;/a&gt;信号常量&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;SIGHUP 终止进程 终端线路挂断&lt;/li&gt;&lt;li&gt;SIGINT 终止进程 中断进程&lt;/li&gt;&lt;li&gt;SIGQUIT 建立CORE文件 终止进程，并且生成core文件&lt;/li&gt;&lt;li&gt;SIGILL 建立CORE文件 非法指令&lt;/li&gt;&lt;li&gt;SIGTRAP 建立CORE文件 跟踪自陷&lt;/li&gt;&lt;li&gt;SIGBUS 建立CORE文件 总线错误&lt;/li&gt;&lt;li&gt;SIGSEGV 建立CORE文件 段非法错误&lt;/li&gt;&lt;li&gt;SIGFPE 建立CORE文件 浮点异常&lt;/li&gt;&lt;li&gt;SIGIOT 建立CORE文件 执行I/O自陷&lt;/li&gt;&lt;li&gt;SIGKILL 终止进程 杀死进程&lt;/li&gt;&lt;li&gt;SIGPIPE 终止进程 向一个没有读进程的管道写数据&lt;/li&gt;&lt;li&gt;SIGALARM 终止进程 计时器到时&lt;/li&gt;&lt;li&gt;SIGTERM 终止进程 软件终止信号&lt;/li&gt;&lt;li&gt;SIGSTOP 停止进程 非终端来的停止信号&lt;/li&gt;&lt;li&gt;SIGTSTP 停止进程 终端来的停止信号&lt;/li&gt;&lt;li&gt;SIGCONT 忽略信号 继续执行一个停止的进程&lt;/li&gt;&lt;li&gt;SIGURG 忽略信号 I/O紧急信号&lt;/li&gt;&lt;li&gt;SIGIO 忽略信号 描述符上可以进行I/O&lt;/li&gt;&lt;li&gt;SIGCHLD 忽略信号 当子进程停止或退出时通知父进程&lt;/li&gt;&lt;li&gt;SIGTTOU 停止进程 后台进程写终端&lt;/li&gt;&lt;li&gt;SIGTTIN 停止进程 后台进程读终端&lt;/li&gt;&lt;li&gt;SIGXGPU 终止进程 CPU时限超时&lt;/li&gt;&lt;li&gt;SIGXFSZ 终止进程 文件长度过长&lt;/li&gt;&lt;li&gt;SIGWINCH 忽略信号 窗口大小发生变化&lt;/li&gt;&lt;li&gt;SIGPROF 终止进程 统计分布图用计时器到时&lt;/li&gt;&lt;li&gt;SIGUSR1 终止进程 用户定义信号1&lt;/li&gt;&lt;li&gt;SIGUSR2 终止进程 用户定义信号2&lt;/li&gt;&lt;li&gt;SIGVTALRM 终止进程 虚拟计时器到时&lt;/li&gt;&lt;/ul&gt;&lt;blockquote&gt;&lt;p&gt;在Bash下调用信号的方法为：&lt;br&gt;代码:&lt;br&gt;trap command/function sig1 sig2 …&lt;/p&gt;&lt;/blockquote&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;信号常量&quot;&gt;&lt;a href=&quot;#信号常量&quot; class=&quot;headerlink&quot; title=&quot;信号常量&quot;&gt;&lt;/a&gt;信号常量&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;SIGHUP 终止进程 终端线路挂断&lt;/li&gt;&lt;li&gt;SIGINT 终止进程 中断进程&lt;/li&gt;&lt;li&gt;SIGQU
-    
-    </summary>
-    
-    
-      <category term="shell" scheme="http://www.rocyuan.com/tags/shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WorkLog20160629</title>
-    <link href="http://www.rocyuan.com/2016/WorkLog20160629.html"/>
-    <id>http://www.rocyuan.com/2016/WorkLog20160629.html</id>
-    <published>2016-06-29T09:46:00.000Z</published>
-    <updated>2016-06-29T10:48:02.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;2016-06-29-17-33-变更记录&quot;&gt;&lt;a href=&quot;#2016-06-29-17-33-变更记录&quot; class=&quot;headerlink&quot; title=&quot;2016-06-29 17:33 变更记录&quot;&gt;&lt;/a&gt;2016-06-29 17:33 变更记录&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;1 将正式服务器的数据dump到本地&lt;/li&gt;&lt;li&gt;2 以本地测试数据库的表结构为准 导入正式数据(新增了一批商家产品数据表服务之类,完全兼容旧的产品)&lt;/li&gt;&lt;li&gt;3 导出数据 同步到 正式数据库&lt;/li&gt;&lt;li&gt;4 TO-DO-LATER&lt;ul&gt;&lt;li&gt;全局缓存的设定感觉有问题&lt;/li&gt;&lt;li&gt;在git上配一个webhook提示提交记录&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 id=&quot;Command-List-Help&quot;&gt;&lt;a href=&quot;#Command-List-Help&quot; class=&quot;headerlink&quot; title=&quot;Command List Help&quot;&gt;&lt;/a&gt;Command List Help&lt;/h3&gt;&lt;blockquote&gt;&lt;p&gt;120M的文件几秒即可&lt;/p&gt;&lt;/blockquote&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mysqldump  -uroot -p123456 -h127.0.0.1 testdb --compact  --complete-insert --no-autocommit &amp;gt;&amp;gt; backup20160628.sql&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;scp root@123.23.2.3:~/backup20160628.sql .&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;hr&gt;&lt;blockquote&gt;&lt;p&gt;用此命令执行&lt;/p&gt;&lt;ul&gt;&lt;li&gt;mysql&amp;gt; source data.sql（&lt;code&gt;推荐&lt;/code&gt;）&lt;/li&gt;&lt;li&gt;mysql -uroot -p123456 stydb -N -f &amp;lt;&amp;lt; data.sql (可能sql文件语法问题报错)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Use&lt;/p&gt;&lt;/blockquote&gt;&lt;ul&gt;&lt;li&gt;只有 create table&lt;/li&gt;&lt;/ul&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mysql -uroot -p123456 -d xxxusdb --tables shopify_product shopify_product_image shopify_product_options shopify_product_variant --compact  --complete-insert --no-autocommit &amp;gt;&amp;gt; newTable.sql&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;&lt;li&gt;只有 data&lt;/li&gt;&lt;/ul&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mysqldump  -uroot -p123456 -t xxxxsdb --tables shopify_product shopify_product_image shopify_product_options shopify_product_variant --compact  --complete-insert --no-autocommit &amp;gt;&amp;gt; newTable.sql&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;2016-06-29-17-33-变更记录&quot;&gt;&lt;a href=&quot;#2016-06-29-17-33-变更记录&quot; class=&quot;headerlink&quot; title=&quot;2016-06-29 17:33 变更记录&quot;&gt;&lt;/a&gt;2016-06-29 17:33 变更记录&lt;/
     
     </summary>
     

