@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.rocyuan.com/"/>
-  <updated>2016-07-31T06:42:20.000Z</updated>
+  <updated>2016-07-31T17:48:52.000Z</updated>
   <id>http://www.rocyuan.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自动上传到百度云脚本</title>
+    <link href="http://www.rocyuan.com/2016/%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%88%B0%E7%99%BE%E5%BA%A6%E4%BA%91%E8%84%9A%E6%9C%AC.html"/>
+    <id>http://www.rocyuan.com/2016/自动上传到百度云脚本.html</id>
+    <published>2016-07-31T17:43:39.000Z</published>
+    <updated>2016-07-31T17:48:52.000Z</updated>
+    
+    <content type="html">&lt;h2 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;自动定时备份电脑上的数据（我用它来自动同步商品数据定期备份避免万年不遇的服务器崩溃数据全无）&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot; title=&quot;步骤&quot;&gt;&lt;/a&gt;步骤&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;登录百度云获取cookie值(BDUSS)(这个有效期是好几十年)&lt;/li&gt;&lt;li&gt;使用脚本&lt;code&gt;./xx.sh xxx.txt&lt;/code&gt;&lt;/li&gt;&lt;/ul&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;31&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;32&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;33&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;34&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;35&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;36&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;37&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;38&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;39&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;40&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;41&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#!/bin/sh&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;baiduyun()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    from=&amp;quot;$1&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    to=&amp;quot;$2&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [ -d &amp;quot;$&amp;#123;from&amp;#125;&amp;quot; ]&amp;amp;&amp;amp; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        tar -cvzf $&amp;#123;from&amp;#125;.tar.gz &amp;quot;$&amp;#123;from&amp;#125;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        from=&amp;quot;$&amp;#123;from&amp;#125;.tar.gz&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    [ &amp;quot;$&amp;#123;to&amp;#125;&amp;quot; == &amp;quot;&amp;quot; ] &amp;amp;&amp;amp; to=&amp;quot;/upload/`date +%F`&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo &amp;quot;upload $&amp;#123;from&amp;#125; to baiduyun : $&amp;#123;to&amp;#125;&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fileName=$&amp;#123;from##*/&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    encodeFile=$(python -c &amp;quot;import urllib; print urllib.quote(&amp;apos;&amp;apos;&amp;apos;$fileName&amp;apos;&amp;apos;&amp;apos;)&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    dir=$(python -c &amp;quot;import urllib; print urllib.quote(&amp;apos;&amp;apos;&amp;apos;$&amp;#123;to&amp;#125;&amp;apos;&amp;apos;&amp;apos;)&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   httpcode=$(curl --connect-timeout 15 -m 3600 -k -o /dev/null -s -w %&amp;#123;http_code&amp;#125; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -X POST \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -F file=&amp;quot;@$&amp;#123;from&amp;#125;&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -F filename=&amp;quot;$&amp;#123;fileName&amp;#125;&amp;quot; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Accept-Language: zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Cache-Control: no-cache&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Connection: keep-alive&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;DNT: 1&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Host: c.pcs.baidu.com&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Origin: http://pan.baidu.com&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Pragma: no-cache&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Referer: http://pan.baidu.com/disk/home&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Accept-Encoding: identity&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;User-Agent: Mozilla/5.0 (X11; Linux; rv:5.0) Gecko/5.0 Firefox/5.0&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    -H &amp;apos;Cookie: BDUSS=VldUFJN3dpdi1qcVJxbUxCT1VmLTBWUnVwOUZoRzk0ZTc1ZkREcmRNMj1JYQUFBQUFBJCQAAAAAAAAAAAEAAAC8V~YfdGlhbnpoaMjIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALrUnFe61JxXbk&amp;apos; \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;quot;https://c.pcs.baidu.com/rest/2.0/pcs/file?method=upload&amp;amp;ondup=overwrite&amp;amp;app_id=250528&amp;amp;dir=$&amp;#123;dir&amp;#125;&amp;amp;filename=$&amp;#123;encodeFile&amp;#125;&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    echo $&amp;#123;httpcode&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;baiduyun &amp;quot;$@&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;自动定时备份电脑上的数据（我用它来自动同步商品数据定期备份避免万年不遇的服务器崩溃数据全无）&lt;/li&gt;&lt;/ul&gt;&lt;h2 id=&quot;步
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>自动备份所有shopify资源,上传百度云</title>
@@ -378,24 +396,6 @@
     
     
       <category term="tools" scheme="http://www.rocyuan.com/tags/tools/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Blog优化设置</title>
-    <link href="http://www.rocyuan.com/2016/Blog%E4%BC%98%E5%8C%96%E8%AE%BE%E7%BD%AE.html"/>
-    <id>http://www.rocyuan.com/2016/Blog优化设置.html</id>
-    <published>2016-06-30T17:20:20.000Z</published>
-    <updated>2016-07-05T17:49:51.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;百度云加速网站&quot;&gt;&lt;a href=&quot;#百度云加速网站&quot; class=&quot;headerlink&quot; title=&quot;百度云加速网站&quot;&gt;&lt;/a&gt;百度云加速网站&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://su.baidu.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://su.baidu.com/&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;百度云加速网站&quot;&gt;&lt;a href=&quot;#百度云加速网站&quot; class=&quot;headerlink&quot; title=&quot;百度云加速网站&quot;&gt;&lt;/a&gt;百度云加速网站&lt;/h2&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://su.baidu.com/&quot; target=&quot;_blank
-    
-    </summary>
-    
     
   </entry>
   
