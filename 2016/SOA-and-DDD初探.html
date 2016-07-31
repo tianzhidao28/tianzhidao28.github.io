@@ -20,16 +20,16 @@
 <meta name="description" content="rocyuan blog 是一个为哲学而生的博客，一切是为了艺术">
 
 
-<meta name="description" content="信号常量SIGHUP 终止进程 终端线路挂断SIGINT 终止进程 中断进程SIGQUIT 建立CORE文件 终止进程，并且生成core文件SIGILL 建立CORE文件 非法指令SIGTRAP 建立CORE文件 跟踪自陷SIGBUS 建立CORE文件 总线错误SIGSEGV 建立CORE文件 段非法错误SIGFPE 建立CORE文件 浮点异常SIGIOT 建立CORE文件 执行I/O自陷SIGK">
+<meta name="description" content="what is service , what should service like关键字: 一个表 一个数据库 一个服务，一个业务一个服务业务隔离, 不同业务间涉及到级联更新的数据,以订阅事件的方式 异步更新。。。。。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[S]Shell中断信号">
-<meta property="og:url" content="http://www.rocyuan.com/2016/S-Shell中断信号.html">
+<meta property="og:title" content="SOA and DDD初探">
+<meta property="og:url" content="http://www.rocyuan.com/2016/SOA-and-DDD初探.html">
 <meta property="og:site_name" content="rocyuan">
-<meta property="og:description" content="信号常量SIGHUP 终止进程 终端线路挂断SIGINT 终止进程 中断进程SIGQUIT 建立CORE文件 终止进程，并且生成core文件SIGILL 建立CORE文件 非法指令SIGTRAP 建立CORE文件 跟踪自陷SIGBUS 建立CORE文件 总线错误SIGSEGV 建立CORE文件 段非法错误SIGFPE 建立CORE文件 浮点异常SIGIOT 建立CORE文件 执行I/O自陷SIGK">
-<meta property="og:updated_time" content="2016-06-29T14:54:01.000Z">
+<meta property="og:description" content="what is service , what should service like关键字: 一个表 一个数据库 一个服务，一个业务一个服务业务隔离, 不同业务间涉及到级联更新的数据,以订阅事件的方式 异步更新。。。。。">
+<meta property="og:updated_time" content="2016-07-31T18:53:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[S]Shell中断信号">
-<meta name="twitter:description" content="信号常量SIGHUP 终止进程 终端线路挂断SIGINT 终止进程 中断进程SIGQUIT 建立CORE文件 终止进程，并且生成core文件SIGILL 建立CORE文件 非法指令SIGTRAP 建立CORE文件 跟踪自陷SIGBUS 建立CORE文件 总线错误SIGSEGV 建立CORE文件 段非法错误SIGFPE 建立CORE文件 浮点异常SIGIOT 建立CORE文件 执行I/O自陷SIGK">
+<meta name="twitter:title" content="SOA and DDD初探">
+<meta name="twitter:description" content="what is service , what should service like关键字: 一个表 一个数据库 一个服务，一个业务一个服务业务隔离, 不同业务间涉及到级联更新的数据,以订阅事件的方式 异步更新。。。。。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -61,7 +61,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>[S]Shell中断信号 | rocyuan</title>
+<title>SOA and DDD初探 | rocyuan</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -280,11 +280,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-S-Shell中断信号" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-SOA-and-DDD初探" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/S-Shell中断信号.html" class="article-date">
-      <time datetime="2016-06-29T14:51:00.000Z" itemprop="datePublished">2016-06-29</time>
+      <a href="/2016/SOA-and-DDD初探.html" class="article-date">
+      <time datetime="2016-07-11T06:05:00.000Z" itemprop="datePublished">2016-07-11</time>
 </a>
     </div>
   
@@ -297,7 +297,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      [S]Shell中断信号
+      SOA and DDD初探
     </h1>
   
 
@@ -307,10 +307,6 @@
         
 
         
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shell/">shell</a></li></ul>
-    </div>
-
         <div class="clearfix"></div>
       </div>
       
@@ -318,7 +314,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="信号常量"><a href="#信号常量" class="headerlink" title="信号常量"></a>信号常量</h2><ul><li>SIGHUP 终止进程 终端线路挂断</li><li>SIGINT 终止进程 中断进程</li><li>SIGQUIT 建立CORE文件 终止进程，并且生成core文件</li><li>SIGILL 建立CORE文件 非法指令</li><li>SIGTRAP 建立CORE文件 跟踪自陷</li><li>SIGBUS 建立CORE文件 总线错误</li><li>SIGSEGV 建立CORE文件 段非法错误</li><li>SIGFPE 建立CORE文件 浮点异常</li><li>SIGIOT 建立CORE文件 执行I/O自陷</li><li>SIGKILL 终止进程 杀死进程</li><li>SIGPIPE 终止进程 向一个没有读进程的管道写数据</li><li>SIGALARM 终止进程 计时器到时</li><li>SIGTERM 终止进程 软件终止信号</li><li>SIGSTOP 停止进程 非终端来的停止信号</li><li>SIGTSTP 停止进程 终端来的停止信号</li><li>SIGCONT 忽略信号 继续执行一个停止的进程</li><li>SIGURG 忽略信号 I/O紧急信号</li><li>SIGIO 忽略信号 描述符上可以进行I/O</li><li>SIGCHLD 忽略信号 当子进程停止或退出时通知父进程</li><li>SIGTTOU 停止进程 后台进程写终端</li><li>SIGTTIN 停止进程 后台进程读终端</li><li>SIGXGPU 终止进程 CPU时限超时</li><li>SIGXFSZ 终止进程 文件长度过长</li><li>SIGWINCH 忽略信号 窗口大小发生变化</li><li>SIGPROF 终止进程 统计分布图用计时器到时</li><li>SIGUSR1 终止进程 用户定义信号1</li><li>SIGUSR2 终止进程 用户定义信号2</li><li>SIGVTALRM 终止进程 虚拟计时器到时</li></ul><blockquote><p>在Bash下调用信号的方法为：<br>代码:<br>trap command/function sig1 sig2 …</p></blockquote>
+        <blockquote><p>what is service , what should service like</p><p>关键字: 一个表 一个数据库 一个服务，一个业务一个服务</p><p>业务隔离, 不同业务间涉及到级联更新的数据,以订阅事件的方式 异步更新</p></blockquote><p>。。。。。</p>
       
     </div>
     
@@ -326,13 +322,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/S-Shell中断信号.html">[S]Shell中断信号</a></p>
+        <p><span>本文标题:</span><a href="/2016/SOA-and-DDD初探.html">SOA and DDD初探</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">rocyuan</a></p>
-        <p><span>发布时间:</span>2016-06-29, 22:51:00</p>
-        <p><span>最后更新:</span>2016-06-29, 22:54:01</p>
+        <p><span>发布时间:</span>2016-07-11, 14:05:00</p>
+        <p><span>最后更新:</span>2016-08-01, 02:53:20</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/S-Shell中断信号.html" title="[S]Shell中断信号">http://www.rocyuan.com/2016/S-Shell中断信号.html</a>
-            <span class="copy-path" data-clipboard-text="原文: http://www.rocyuan.com/2016/S-Shell中断信号.html　　作者: rocyuan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/SOA-and-DDD初探.html" title="SOA and DDD初探">http://www.rocyuan.com/2016/SOA-and-DDD初探.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.rocyuan.com/2016/SOA-and-DDD初探.html　　作者: rocyuan" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -345,15 +341,15 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/mysqldump.html">
-                    mysqldump
+                <a href="/2016/ISO8601日期格式的转换.html">
+                    ISO8601日期格式的转换
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/WorkLog20160629.html">
-                    WorkLog20160629
+                <a href="/2016/Shopify-Add-Webhooks-Shell.html">
+                    Shopify_Add_Webhooks_Shell脚本
                 </a>
             </div>
         
@@ -364,7 +360,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#信号常量"><span class="toc-number">1.</span> <span class="toc-text">信号常量</span></a></li></ol>
+    
 </div>
 <style>
     .left-col .switch-btn,
@@ -395,7 +391,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"[S]Shell中断信号　| rocyuan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"SOA and DDD初探　| rocyuan　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -411,7 +407,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/S-Shell中断信号.html" data-title="[S]Shell中断信号" data-url="http://www.rocyuan.com/2016/S-Shell中断信号.html"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/SOA-and-DDD初探.html" data-title="SOA and DDD初探" data-url="http://www.rocyuan.com/2016/SOA-and-DDD初探.html"></div>
     <script>
         var duoshuoQuery = {short_name:"rocyuan"};
         var loadComment = function(){
@@ -435,7 +431,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/mysqldump.html" title="上一篇: mysqldump">
+            <a href="/2016/ISO8601日期格式的转换.html" title="上一篇: ISO8601日期格式的转换">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -443,7 +439,7 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/WorkLog20160629.html" title="下一篇: WorkLog20160629">
+            <a href="/2016/Shopify-Add-Webhooks-Shell.html" title="下一篇: Shopify_Add_Webhooks_Shell脚本">
                 <i class="fa fa-angle-right"></i>
             </a>
         
