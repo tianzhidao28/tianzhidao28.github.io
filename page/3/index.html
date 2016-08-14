@@ -292,6 +292,72 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-Mac-Cli" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/Mac-Cli.html" class="article-date">
+      <time datetime="2016-07-05T17:49:00.000Z" itemprop="datePublished">2016-07-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/Mac-Cli.html">[转]Mac-Cli</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Mac-CLI"><a href="#Mac-CLI" class="headerlink" title="Mac CLI"></a>Mac CLI</h1><p> OS X command line tools for developers</p><p>:star: Now with modularity and plugins! You can check the plugins folder: <a href="https://github.com/guarinogabriel/mac-cli/tree/master/mac-cli/plugins" target="_blank" rel="external">/mac-cli/plugins</a></p><p><em>Contributions to add new plugins and keep improving the existing ones are welcome and very much appreciated!</em></p><p><img src="https://github.com/guarinogabriel/mac-cli/raw/master/demo/demo.gif" alt="image"></p><p>The ultimate tool for developers to manage their Mac. It provides a huge set of command line commands that automate the usage of your OS X system.<br>When you run a function, the executed command is displayed and that helps you memorize each of the Utilities for future usage.</p><hr><h3 id="Installation-in-1-Simple-Step-Including-configuration-wizard"><a href="#Installation-in-1-Simple-Step-Including-configuration-wizard" class="headerlink" title="Installation in 1 Simple Step - Including configuration wizard!"></a>Installation in 1 Simple Step - Including configuration wizard!</h3><p>Via curl</p><blockquote><p><code>sh -c &quot;$(curl -fsSL https://raw.githubusercontent.com/guarinogabriel/mac-cli/master/mac-cli/tools/install)&quot;</code></p></blockquote><p>Via wget</p><blockquote><p><code>sh -c &quot;$(wget https://raw.githubusercontent.com/guarinogabriel/mac-cli/master/mac-cli/tools/install -O -)&quot;</code></p></blockquote><p>Then, re-open your terminal client. You will be able to run all the commands listed below, for example:</p><blockquote><p><code>mac help</code></p></blockquote><hr><h3 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h3><p>The configuration is done when you install Mac CLI for the first time though the installer configuration wizard.<br>After that, you can update your Mac CLI configuration by editing the following file: <code>/usr/local/bin/mac</code></p><hr><h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><p>These are the requirements to be able to run all the commands (the dependencies/requirements are installed when you install Mac CLI for the first time):</p><ul><li>Homebrew</li><li>Git</li><li>Python</li><li>Pipe Viewer (pv)</li></ul><hr><h3 id="Integrated-Projects"><a href="#Integrated-Projects" class="headerlink" title="Integrated Projects"></a>Integrated Projects</h3><p>The following amazing projects have been integrated on the mac script (all the integrated projects are optional and can be installed through the installation wizard):</p><ul><li>Glances (<a href="https://github.com/nicolargo/glances" target="_blank" rel="external">https://github.com/nicolargo/glances</a>)</li><li>MySQL CLI (<a href="https://github.com/dbcli/mycli" target="_blank" rel="external">https://github.com/dbcli/mycli</a>)</li><li>speedtest-cli (<a href="https://github.com/sivel/speedtest-cli" target="_blank" rel="external">https://github.com/sivel/speedtest-cli</a>)</li><li>n98-magerun (<a href="https://github.com/netz98/n98-magerun" target="_blank" rel="external">https://github.com/netz98/n98-magerun</a>)</li><li>n98-magerun2 (<a href="https://github.com/netz98/n98-magerun2" target="_blank" rel="external">https://github.com/netz98/n98-magerun2</a>)</li><li>imageOptim</li><li>iStats</li></ul><hr><h3 id="Help-Commands-List"><a href="#Help-Commands-List" class="headerlink" title="Help / Commands List"></a>Help / Commands List</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac help</code></td><td>List all available commands in mac script</td></tr></tbody></table><h3 id="General-Commands"><a href="#General-Commands" class="headerlink" title="General Commands"></a>General Commands</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac update</code></td><td>Install OS X software updates, update installed Ruby gems, Homebrew, npm and their installed packages</td><td></td></tr><tr><td><code>mac lock</code></td><td>Lock</td><td></td></tr><tr><td><code>mac restart</code></td><td>Restart OS X</td><td></td></tr><tr><td><code>mac sleep</code></td><td>Sleep mode</td><td></td></tr><tr><td><code>mac shutdown</code></td><td>Shutdown</td><td></td></tr><tr><td><code>mac time</code></td><td>Show clock at top right position in Terminal/iTerm</td><td></td></tr><tr><td><code>mac screensaver</code></td><td>Start screensaver</td><td></td></tr><tr><td><code>mac folders:list</code></td><td>List folders in current directory with their current size</td><td></td></tr><tr><td><code>mac folder:size</code></td><td>Calculate current folder size</td><td></td></tr><tr><td><code>mac folders:remove-empty</code></td><td>Remove empty subdirectories</td><td></td></tr><tr><td><code>mac apps:close-all</code></td><td>Close all opened apps</td><td></td></tr><tr><td><code>mac apps:app-store</code></td><td>Get list of installed apps from App Store</td><td></td></tr><tr><td><code>mac eject-all</code></td><td>Eject all mounted volumes and disks</td><td></td></tr><tr><td><code>mac battery:status</code></td><td>Get battery status</td><td></td></tr><tr><td><code>mac info</code></td><td>Get OS X version information</td><td></td></tr><tr><td><code>mac hidden:show</code></td><td>Show hidden files</td><td></td></tr><tr><td><code>mac hidden:hide</code></td><td>Hide hidden files</td><td></td></tr><tr><td><code>mac find:text X</code></td><td>Find exact phrase recursively inside directory</td><td>X = Text string</td></tr><tr><td><code>mac find:biggest-files</code></td><td>Find biggest files inside directory</td><td></td></tr><tr><td><code>mac find:biggest-directories</code></td><td>Find biggest directories inside directory</td><td></td></tr><tr><td><code>mac zip:extract X</code></td><td>Extract Zip file to current folder</td><td>X = Zip file to extract</td></tr><tr><td><code>mac gzip:compress X</code></td><td>Compress current file using Gzip</td><td>X = File to compress</td></tr><tr><td><code>mac gzip:extract X</code></td><td>Extract Gzip file to current folder</td><td>X = Gzip file to extract</td></tr><tr><td><code>mac tar:compress X</code></td><td>Compress X file/directory using tar with progress indicator</td><td>X = File or directory</td></tr><tr><td><code>mac tar:extract X</code></td><td>Extract tar file to current folder</td><td>X = Tar file to extract</td></tr></tbody></table><h3 id="Search-Utilities"><a href="#Search-Utilities" class="headerlink" title="Search Utilities"></a>Search Utilities</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac find:recent N</code></td><td>Find files modified in the last N minutes</td><td>N = number of minutes</td></tr><tr><td><code>mac find:duplicated</code></td><td>Find duplicated files</td><td></td></tr><tr><td><code>mac search:replace X</code></td><td>Search and replace string in file</td><td>X = File to perform the search and replace operation</td></tr></tbody></table><h3 id="Network-Utilities"><a href="#Network-Utilities" class="headerlink" title="Network Utilities"></a>Network Utilities</h3><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>mac speedtest</code></td><td>Internet connection speed test</td></tr><tr><td><code>mac speedtest:infinite</code></td><td>Run internet speed test each 5 minutes</td></tr><tr><td><code>mac ports</code></td><td>List of used ports</td></tr><tr><td><code>mac ip:local</code></td><td>Get local IP address</td></tr><tr><td><code>mac ip:public</code></td><td>Get public IP address</td></tr></tbody></table><h3 id="LAMP-Linux-Apache-MySQL-PHP-Utilities"><a href="#LAMP-Linux-Apache-MySQL-PHP-Utilities" class="headerlink" title="LAMP (Linux, Apache, MySQL, PHP) Utilities"></a>LAMP (Linux, Apache, MySQL, PHP) Utilities</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac mysql</code></td><td>Open Sequel PRO app)</td><td></td></tr><tr><td><code>mac mysql:cli</code></td><td>Start MySQL CLI with autocompletion and syntax higlighting</td><td></td></tr><tr><td><code>mac mysql:list</code></td><td>List all MySQL databases</td><td></td></tr><tr><td><code>mac mysql:dump-all</code></td><td>Export all MySQL databases to individual files</td><td></td></tr><tr><td><code>mac mysql:dump X</code></td><td>Export MySQL database to current directory</td><td>X = database name</td></tr><tr><td><code>mac mysql:import X</code></td><td>Import MySQL database</td><td>X = SQL file</td></tr><tr><td><code>mac mysql:import-table X</code></td><td>Import single MySQL database table</td><td>X = SQL file containing database table</td></tr><tr><td><code>mac mysql:create X</code></td><td>Create MySQL database</td><td>X = Database name</td></tr><tr><td><code>mac mysql:drop X</code></td><td>Remove MySQL database</td><td>X = Database name</td></tr><tr><td><code>mac mysql:duplicate X</code></td><td>Duplicate MySQL database</td><td>X = Database name</td></tr><tr><td><code>mac mamp:start</code></td><td>Start MAMP Server (Apache and MySQL)</td><td></td></tr><tr><td><code>mac mamp:stop</code></td><td>Stop MAMP Server (Apache and MySQL)</td><td></td></tr><tr><td><code>mac mamp:restart</code></td><td>Restart MAMP Server (Apache and MySQL)</td><td></td></tr><tr><td><code>mac php:syntax</code></td><td>Check PHP Syntax for all PHP files in current location</td><td></td></tr><tr><td><code>mac php:info</code></td><td>Get PHP info on command line</td><td></td></tr><tr><td><code>mac hosts:edit</code></td><td>Edit hosts file</td></tr></tbody></table><h3 id="SSH-Utilities"><a href="#SSH-Utilities" class="headerlink" title="SSH Utilities"></a>SSH Utilities</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac ssh:download-file X</code></td><td>Download file from remote server through SSH</td><td>X = Path of the remote file to download</td></tr><tr><td><code>mac ssh:download-folder X</code></td><td>Download entire folder from remote server through SSH</td><td>X = Path of the remote folder to download</td></tr><tr><td><code>mac ssh:download-database X</code></td><td>Download MySQL from remote server through SSH</td><td>X = Name of the database to download</td></tr><tr><td><code>mac ssh:sync:local X</code></td><td>Sync local folder with remote folder using rsync through SSH (download remote folder to local folder)</td><td>X = Path of the remote folder to sync to local folder</td></tr><tr><td><code>mac ssh:sync:remote X</code></td><td>Sync remote folder with local folder using rsync through SSH (upload local folder to remote folder)</td><td>X = Path of the remote folder to sync from local folder</td></tr><tr><td><code>mac ssh:upload X</code></td><td>Upload file to remote server through SSH</td><td>X = Path of the file to upload to the remote server</td></tr><tr><td><code>mac ssh:public-key</code></td><td>Copy SSH Public Key</td><td></td></tr><tr><td><code>mac ssh:list</code></td><td>List all the saved SSH credentials</td></tr></tbody></table><h3 id="LAMP-Utilities"><a href="#LAMP-Utilities" class="headerlink" title="LAMP Utilities"></a>LAMP Utilities</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac mysql:gui</code></td><td>Open Sequel PRO app)</td><td></td></tr><tr><td><code>mac mysql:cli</code></td><td>Start MySQL CLI with autocompletion and syntax higlighting</td><td></td></tr><tr><td><code>mac mysql:list</code></td><td>List all MySQL databases</td><td></td></tr><tr><td><code>mac mysql:dump-all</code></td><td>Export all MySQL databases to individual files</td><td></td></tr><tr><td><code>mac mysql:dump X</code></td><td>Export MySQL database to current directory</td><td>X = database name</td></tr><tr><td><code>mac mysql:import X</code></td><td>Import MySQL database</td><td>X = SQL file</td></tr><tr><td><code>mac mysql:import-table X</code></td><td>Import single MySQL database table</td><td>X = SQL file containing database table</td></tr><tr><td><code>mac mysql:create X</code></td><td>Create MySQL database</td><td>X = Database name</td></tr><tr><td><code>mac mysql:drop X</code></td><td>Remove MySQL database</td><td>X = Database name</td></tr><tr><td><code>mac mysql:duplicate X</code></td><td>Duplicate MySQL database</td><td>X = Database name</td></tr><tr><td><code>mac mamp:start</code></td><td>Start MAMP Server (Apache and MySQL)</td><td></td></tr><tr><td><code>mac mamp:stop</code></td><td>Stop MAMP Server (Apache and MySQL)</td><td></td></tr><tr><td><code>mac mamp:restart</code></td><td>Restart MAMP Server (Apache and MySQL)</td><td></td></tr><tr><td><code>mac php:syntax</code></td><td>Check PHP Syntax for all PHP files in current location</td><td></td></tr><tr><td><code>mac php:info</code></td><td>Get PHP info on command line</td><td></td></tr><tr><td><code>mac hosts:edit</code></td><td>Edit hosts file</td></tr></tbody></table><h3 id="Web-Development-Utilities"><a href="#Web-Development-Utilities" class="headerlink" title="Web Development Utilities"></a>Web Development Utilities</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac dev:monitor X</code></td><td>Monitor file changes (for example: log files)</td><td>X = File to monitor</td></tr><tr><td><code>mac dev:compass:compile</code></td><td>Compile current folder using compass</td><td></td></tr><tr><td><code>mac dev:optimize-images</code></td><td>Optimize all images in current directory and subdirectories</td></tr><tr><td><code>mac dev:css:convert-to-scss</code></td><td>Convert CSS file to SCSS</td></tr></tbody></table><h3 id="Performance-and-maintenance-Utilities"><a href="#Performance-and-maintenance-Utilities" class="headerlink" title="Performance and maintenance Utilities"></a>Performance and maintenance Utilities</h3><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>mac system</code></td><td>Show system information to review mac performance</td></tr><tr><td><code>mac temp</code></td><td>Show temperature, fan and battery statistics</td></tr><tr><td><code>mac memory</code></td><td>See memory usage sorted by memory consumption</td></tr><tr><td><code>mac trash:empty</code></td><td>Empty trash</td></tr><tr><td><code>mac trash:size</code></td><td>Calculate trash size</td></tr><tr><td><code>mac desktop:cleanup</code></td><td>Remove all files and directories from Desktop directory</td></tr><tr><td><code>mac downloads:cleanup</code></td><td>Remove all files and directories from Downloads directory</td></tr></tbody></table><h3 id="iTerm-Terminal-Utilities"><a href="#iTerm-Terminal-Utilities" class="headerlink" title="iTerm / Terminal Utilities"></a>iTerm / Terminal Utilities</h3><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>mac iterm:tab-title</code></td><td>Set title of current iTerm tab</td></tr></tbody></table><h3 id="Git-Utilities"><a href="#Git-Utilities" class="headerlink" title="Git Utilities"></a>Git Utilities</h3><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>mac git:config</code></td><td>Display local Git configuration</td></tr><tr><td><code>mac git:open</code></td><td>Open current repository on Github</td></tr><tr><td><code>mac git:create:branch</code></td><td>Create branch based on current branch</td></tr><tr><td><code>mac git:branches:date</code></td><td>Get last update date for all branches in current project</td></tr><tr><td><code>mac git:undo-commit</code></td><td>Undo latest commit</td></tr><tr><td><code>mac git:log</code></td><td>See latest commits IDs and titles for current branch</td></tr><tr><td><code>mac git:branch</code></td><td>See all branches</td></tr><tr><td><code>mac git:branch:rename</code></td><td>Rename Git branch</td></tr><tr><td><code>mac git:branch:remove-local</code></td><td>Remove local Git branch</td></tr><tr><td><code>mac git:branch:remove-remote</code></td><td>Remove local and remote Git branch</td></tr><tr><td><code>mac git:remove</code></td><td>Remove Git from current project</td></tr><tr><td><code>mac git:settings</code></td><td>Check Git settings</td></tr><tr><td><code>mac git:add-removed</code></td><td>Add removed files to staged files</td></tr><tr><td><code>mac git:size</code></td><td>Get size for current Git directory</td></tr></tbody></table><h3 id="Web-Utilities"><a href="#Web-Utilities" class="headerlink" title="Web Utilities"></a>Web Utilities</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac web:download-images</code></td><td>Download all images from website to current directory</td></tr></tbody></table><h3 id="Homebrew-Utilities"><a href="#Homebrew-Utilities" class="headerlink" title="Homebrew Utilities"></a>Homebrew Utilities</h3><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>mac brew:list</code></td><td>Get a list of installed Homebrew packages</td></tr></tbody></table><h3 id="Xcode-Utilities"><a href="#Xcode-Utilities" class="headerlink" title="Xcode Utilities"></a>Xcode Utilities</h3><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>mac xcode:cleanup</code></td><td>Cleanup Xcode files to free up hard disk space</td></tr></tbody></table><h3 id="Image-Utilities"><a href="#Image-Utilities" class="headerlink" title="Image Utilities"></a>Image Utilities</h3><table><thead><tr><th>Command</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>mac image:generate:mobile-app-icons X Y</code></td><td>Generate mobile app icons</td><td>X = Original image file, Y = Output path</td></tr></tbody></table><h3 id="Magento-Utilities"><a href="#Magento-Utilities" class="headerlink" title="Magento Utilities"></a>Magento Utilities</h3><table><thead><tr><th>Command</th><th>Description</th></tr></thead><tbody><tr><td><code>mac magento:version</code></td><td>Get Magento version from current project on command line</td></tr><tr><td><code>mac magento:customer:create</code></td><td>Create Magento customer with sample address and sample credit card information</td></tr><tr><td><code>mac magento:fix-permissions</code></td><td>Fix Magento permissions for files and directories</td></tr><tr><td><code>mac magento:order:create</code></td><td>Create sample order in Magento</td></tr><tr><td><code>mac magento:shell-script:create</code></td><td>Create script in Magento shell folder to be run from command line</td></tr><tr><td><code>mac magento:gitignore:create</code></td><td>Create gitignore file for Magento project</td></tr><tr><td><code>mac magento:url-rewrites:enable</code></td><td>Enable Magento URL rewrites</td></tr><tr><td><code>mac magento:url-rewrites:disable</code></td><td>Disable Magento URL rewrites</td></tr><tr><td><code>mac magento2:install</code></td><td>Install Magento 2 in current folder</td></tr></tbody></table>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/tools/">tools</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mac/">mac</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tools/">tools</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 搜索引擎优化(SEO) 添加百度主动推送代码，让搜索引擎最快发现文章 -->
+
+
+  
     <article id="post-用代码写代码" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -816,72 +882,6 @@
       
 
       
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-<!-- 搜索引擎优化(SEO) 添加百度主动推送代码，让搜索引擎最快发现文章 -->
-
-
-  
-    <article id="post-SOA的发展与毁灭" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/SOA的发展与毁灭.html" class="article-date">
-      <time datetime="2016-06-26T12:40:00.000Z" itemprop="datePublished">2016-06-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/SOA的发展与毁灭.html">SOA的发展与毁灭</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="SOA的发展与毁灭"><a href="#SOA的发展与毁灭" class="headerlink" title="SOA的发展与毁灭"></a>SOA的发展与毁灭</h1><h2 id="SOA-发展之路"><a href="#SOA-发展之路" class="headerlink" title="SOA 发展之路"></a>SOA 发展之路</h2><ul><li>dubbo plugin<ul><li>(1) dubbo + thrift（可以参照dubbo源码里关于RMI的实现继续优化） 与现有的thrift服务兼容管理的解决代码（已经可以使用）</li><li>(2)dubbo container: 监视所有dubbo服务的启动与关闭，用极光的监控系统发送通知消息</li><li>(3)dubbo+python+thrift:(未完成版)</li></ul></li></ul><h2 id="SOA一年后出现的问题的解决方案"><a href="#SOA一年后出现的问题的解决方案" class="headerlink" title="SOA一年后出现的问题的解决方案"></a>SOA一年后出现的问题的解决方案</h2><p><a href="http://www.v2ex.com/t/243773#reply0" target="_blank" rel="external">http://www.v2ex.com/t/243773#reply0</a></p><h2 id="SOA升级与抛弃-3-10年内的解决方案与思路"><a href="#SOA升级与抛弃-3-10年内的解决方案与思路" class="headerlink" title="SOA升级与抛弃  3-10年内的解决方案与思路"></a>SOA升级与抛弃 3-10年内的解决方案与思路</h2><p><a href="https://www.zybuluo.com/tianzhidao28/note/382583" target="_blank" rel="external">https://www.zybuluo.com/tianzhidao28/note/382583</a></p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/dubbo/">dubbo</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dubbo/">dubbo</a></li></ul>
-    </div>
-
       
       <div class="clearfix"></div>
     </div>
