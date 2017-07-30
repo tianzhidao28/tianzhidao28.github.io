@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.rocyuan.com/"/>
-  <updated>2017-07-30T04:27:55.000Z</updated>
+  <updated>2017-07-30T04:59:38.000Z</updated>
   <id>http://www.rocyuan.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信签到拿积分---招商银行信用卡活动</title>
+    <link href="http://www.rocyuan.com/2017/%E5%BE%AE%E4%BF%A1%E7%AD%BE%E5%88%B0%E6%8B%BF%E7%A7%AF%E5%88%86-%E6%8B%9B%E5%95%86%E9%93%B6%E8%A1%8C%E4%BF%A1%E7%94%A8%E5%8D%A1%E6%B4%BB%E5%8A%A8.html"/>
+    <id>http://www.rocyuan.com/2017/微信签到拿积分-招商银行信用卡活动.html</id>
+    <published>2017-07-30T04:34:50.000Z</published>
+    <updated>2017-07-30T04:59:38.000Z</updated>
+    
+    <content type="html">&lt;p&gt;招商银行信用卡活动&lt;br&gt;author: rocyuan&lt;br&gt;tags:微信&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;前2天 招商银行信用卡给我发了一条消息说 什么什么达标了，可以每天在公众号里回复一个 “签到” 领几积分。我靠 我是这么无聊的人吗，我像这么会花无聊时间每天在你的公众号里 回复 “签到” 的人吗？&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;&lt;code&gt;结果是 : 我这么做了&lt;/code&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.rawgit.com/tianzhidao28/pictures/master/wechat_001.png&quot; alt=&quot;wechat_001.png&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://cdn.rawgit.com/tianzhidao28/pictures/master/wechat_002.png&quot; alt=&quot;wechat_002.png&quot;&gt;&lt;/p&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;招商银行信用卡活动&lt;br&gt;author: rocyuan&lt;br&gt;tags:微信&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;前2天 招商银行信用卡给我发了一条消息说 什么什么达标了，可以每天在公众号里回复一个 “签到” 领几积分。我靠 我是这么无聊的人吗，我像这么会花无聊时间每天在
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>近年来</title>
@@ -367,24 +385,6 @@
     <summary type="html">
     
       &lt;h2 id=&quot;Mac上的ISO8601&quot;&gt;&lt;a href=&quot;#Mac上的ISO8601&quot; class=&quot;headerlink&quot; title=&quot;Mac上的ISO8601&quot;&gt;&lt;/a&gt;Mac上的ISO8601&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>SOA and DDD初探</title>
-    <link href="http://www.rocyuan.com/2016/SOA-and-DDD%E5%88%9D%E6%8E%A2.html"/>
-    <id>http://www.rocyuan.com/2016/SOA-and-DDD初探.html</id>
-    <published>2016-07-11T06:05:00.000Z</published>
-    <updated>2016-07-31T18:53:20.000Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;&lt;p&gt;what is service , what should service like&lt;/p&gt;&lt;p&gt;关键字: 一个表 一个数据库 一个服务，一个业务一个服务&lt;/p&gt;&lt;p&gt;业务隔离, 不同业务间涉及到级联更新的数据,以订阅事件的方式 异步更新&lt;/p&gt;&lt;/blockquote&gt;&lt;p&gt;。。。。。&lt;/p&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;&lt;p&gt;what is service , what should service like&lt;/p&gt;&lt;p&gt;关键字: 一个表 一个数据库 一个服务，一个业务一个服务&lt;/p&gt;&lt;p&gt;业务隔离, 不同业务间涉及到级联更新的数据,以订阅事件的方式 异步更新&lt;/p&gt;&lt;/
     
     </summary>
     
