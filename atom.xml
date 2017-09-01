@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.rocyuan.com/"/>
-  <updated>2017-08-31T15:53:39.000Z</updated>
+  <updated>2017-09-01T08:32:46.000Z</updated>
   <id>http://www.rocyuan.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中国行政区域划分</title>
+    <link href="http://www.rocyuan.com/2017/%E4%B8%AD%E5%9B%BD%E8%A1%8C%E6%94%BF%E5%8C%BA%E5%9F%9F%E5%88%92%E5%88%86.html"/>
+    <id>http://www.rocyuan.com/2017/中国行政区域划分.html</id>
+    <published>2017-09-01T08:32:33.000Z</published>
+    <updated>2017-09-01T08:32:46.000Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/tianzhidao28/pictures/master/git_xingzhengquyuhuafen.png&quot; alt=&quot;git_xingzhengquyuhuafen.png&quot;&gt;&lt;/p&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat ~/Documents/中国最新行政区域划分.txt | awk &amp;apos;&amp;#123;print $2&amp;#125;&amp;apos; | sed s/[[:space:]]//g | sort | uniq -d  | awk &amp;apos;&amp;#123;printf(&amp;quot; | grep  -v  \&amp;quot;%s\&amp;quot; &amp;quot;,$1)&amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;&lt;p&gt;一些区县名 有同名的&lt;/p&gt;&lt;/blockquote&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cat ~/Documents/中国最新行政区域划分.txt |grep &amp;quot;市&amp;quot; | grep -v &amp;quot;grep&amp;quot; | grep -v  &amp;quot;城区&amp;quot;  | grep -v  &amp;quot;矿区&amp;quot;  | grep -v  &amp;quot;郊区&amp;quot;  | grep -v  &amp;quot;南山区&amp;quot;  | grep -v  &amp;quot;向阳区&amp;quot;  | grep -v  &amp;quot;和平区&amp;quot;  | grep -v  &amp;quot;城中区&amp;quot;  | grep -v  &amp;quot;城关区&amp;quot;  | grep -v  &amp;quot;宝山区&amp;quot;  | grep -v  &amp;quot;市中区&amp;quot;  | grep -v  &amp;quot;市辖区&amp;quot;  | grep -v  &amp;quot;新华区&amp;quot;  | grep -v  &amp;quot;新城区&amp;quot;  | grep -v  &amp;quot;普陀区&amp;quot;  | grep -v  &amp;quot;朝阳区&amp;quot;  | grep -v  &amp;quot;桥东区&amp;quot;  | grep -v  &amp;quot;桥西区&amp;quot;  | grep -v  &amp;quot;永定区&amp;quot;  | grep -v  &amp;quot;江北区&amp;quot;  | grep -v  &amp;quot;河东区&amp;quot;  | grep -v  &amp;quot;海州区&amp;quot;  | grep -v  &amp;quot;白云区&amp;quot;  | grep -v  &amp;quot;西安区&amp;quot;  | grep -v  &amp;quot;西湖区&amp;quot;  | grep -v  &amp;quot;通州区&amp;quot;  | grep -v  &amp;quot;铁东区&amp;quot;  | grep -v  &amp;quot;铁西区&amp;quot;  | grep -v  &amp;quot;长安区&amp;quot;  | grep -v  &amp;quot;青山区&amp;quot;  | grep -v  &amp;quot;鼓楼区&amp;quot;  | grep -v  &amp;quot; 省直辖县级行政区划&amp;quot; | grep -v &amp;quot;0000&amp;quot; | while read a b ;do a=$(echo $a | sed &amp;apos;s/[[:space:]]//g&amp;apos;); b=$(echo $b | sed &amp;apos;s/[[:space:]]//g&amp;apos;); echo &amp;quot;$a  $b&amp;quot; ; done&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;&lt;p&gt;全部&lt;/p&gt;&lt;/blockquote&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cat ~/Documents/中国最新行政区域划分.txt |grep &amp;quot;市&amp;quot; | grep -v &amp;quot;grep&amp;quot; | grep -v  &amp;quot;城区&amp;quot;  | grep -v  &amp;quot;矿区&amp;quot;  | grep -v  &amp;quot;郊区&amp;quot;  | grep -v  &amp;quot;南山区&amp;quot;  | grep -v  &amp;quot;向阳区&amp;quot;  | grep -v  &amp;quot;和平区&amp;quot;  | grep -v  &amp;quot;城中区&amp;quot;  | grep -v  &amp;quot;城关区&amp;quot;  | grep -v  &amp;quot;宝山区&amp;quot;  | grep -v  &amp;quot;市中区&amp;quot;  | grep -v  &amp;quot;市辖区&amp;quot;  | grep -v  &amp;quot;新华区&amp;quot;  | grep -v  &amp;quot;新城区&amp;quot;  | grep -v  &amp;quot;普陀区&amp;quot;  | grep -v  &amp;quot;朝阳区&amp;quot;  | grep -v  &amp;quot;桥东区&amp;quot;  | grep -v  &amp;quot;桥西区&amp;quot;  | grep -v  &amp;quot;永定区&amp;quot;  | grep -v  &amp;quot;江北区&amp;quot;  | grep -v  &amp;quot;河东区&amp;quot;  | grep -v  &amp;quot;海州区&amp;quot;  | grep -v  &amp;quot;白云区&amp;quot;  | grep -v  &amp;quot;西安区&amp;quot;  | grep -v  &amp;quot;西湖区&amp;quot;  | grep -v  &amp;quot;通州区&amp;quot;  | grep -v  &amp;quot;铁东区&amp;quot;  | grep -v  &amp;quot;铁西区&amp;quot;  | grep -v  &amp;quot;长安区&amp;quot;  | grep -v  &amp;quot;青山区&amp;quot;  | grep -v  &amp;quot;鼓楼区&amp;quot;  | grep -v  &amp;quot;省直辖县级行政区划&amp;quot; | grep -v &amp;quot;0000&amp;quot; | while read a b ;do a=$(echo $a | sed &amp;apos;s/[[:space:]]//g&amp;apos;); b=$(echo $b | sed &amp;apos;s/[[:space:]]//g&amp;apos;); echo &amp;quot;$a  $b&amp;quot; ; done | awk &amp;apos;&amp;#123; printf(&amp;quot;update update risk_level_mark set city_code = \&amp;quot;%s\&amp;quot; where ((city_name = \&amp;quot;%s\&amp;quot;  and city_area = \&amp;quot;*\&amp;quot;) or (city_area = \&amp;quot;%s\&amp;quot;) ) and city_code is null ;\n&amp;quot;,$1,$2,$2)   &amp;#125;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/tianzhidao28/pictures/master/git_xingzhengquyuhuafen.png&quot; alt=&quot;git_xingzhengquyuhuafen.png&quot;&gt;&lt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Json变Java类插件</title>
@@ -367,24 +385,6 @@
     <summary type="html">
     
       &lt;ul&gt;&lt;li&gt;登录&lt;a href=&quot;https://my.jrebel.com这个网站，然后用Twitter或者Facebook账号登录这个网站，就能获得免费的激活码&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://my.jrebel.com这个
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>IP归属地查询API</title>
-    <link href="http://www.rocyuan.com/2016/IP%E5%BD%92%E5%B1%9E%E5%9C%B0%E6%9F%A5%E8%AF%A2API.html"/>
-    <id>http://www.rocyuan.com/2016/IP归属地查询API.html</id>
-    <published>2016-07-11T11:28:01.000Z</published>
-    <updated>2016-07-11T11:29:41.000Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;淘宝IP库&quot;&gt;&lt;a href=&quot;#淘宝IP库&quot; class=&quot;headerlink&quot; title=&quot;淘宝IP库&quot;&gt;&lt;/a&gt;淘宝IP库&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;curl -X GET http://ip.taobao.com/service/getIpInfo.php?ip=183.39.153.247&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img src=&quot;http://7xogqz.com1.z0.glb.clouddn.com/www.rocyuan.com_20160711_192635taobao_ip_utils.png&quot; alt=&quot;taobao_ip_utils.png&quot;&gt;&lt;/p&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;淘宝IP库&quot;&gt;&lt;a href=&quot;#淘宝IP库&quot; class=&quot;headerlink&quot; title=&quot;淘宝IP库&quot;&gt;&lt;/a&gt;淘宝IP库&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;
     
     </summary>
     
