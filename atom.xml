@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.rocyuan.com/"/>
-  <updated>2017-10-19T13:56:14.000Z</updated>
+  <updated>2017-11-01T04:28:13.000Z</updated>
   <id>http://www.rocyuan.com/</id>
   
   <author>
@@ -14,6 +14,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WHY LEAVE</title>
+    <link href="http://www.rocyuan.com/2017/WHY-LEAVE.html"/>
+    <id>http://www.rocyuan.com/2017/WHY-LEAVE.html</id>
+    <published>2017-11-01T04:07:21.000Z</published>
+    <updated>2017-11-01T04:28:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>归纳：可能就是老油条+没责任心+工作能力差的人太多了+几个月来招的也是这样的人。</p><p><img src="https://github.com/tianzhidao28/pictures/blob/master/WechatIMG5.jpeg?raw=true" alt="1"></p><p><img src="https://raw.githubusercontent.com/tianzhidao28/pictures/master/We0000001.jpeg" alt="2"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;归纳：可能就是老油条+没责任心+工作能力差的人太多了+几个月来招的也是这样的人。&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;https://github.com/tianzhidao28/pictures/blob/master/WechatIMG5.jpeg?raw=true&quot; a
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>十九大时,手痒犯了个错</title>
@@ -364,28 +382,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub上那些值得我正在试用的JAVA开源库</title>
-    <link href="http://www.rocyuan.com/2016/Github%E8%BF%B7%E4%BA%BA%E7%9A%84Java%E5%BC%80%E6%BA%90%E5%BA%93%E6%8E%A8%E8%8D%90.html"/>
-    <id>http://www.rocyuan.com/2016/Github迷人的Java开源库推荐.html</id>
-    <published>2016-07-15T05:50:00.000Z</published>
-    <updated>2016-07-15T05:54:23.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="字符串处理累-strman-java"><a href="#字符串处理累-strman-java" class="headerlink" title="字符串处理累 strman-java"></a>字符串处理累 strman-java</h2><p><a href="https://github.com/shekhargulati/strman-java" target="_blank" rel="external">https://github.com/shekhargulati/strman-java</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;字符串处理累-strman-java&quot;&gt;&lt;a href=&quot;#字符串处理累-strman-java&quot; class=&quot;headerlink&quot; title=&quot;字符串处理累 strman-java&quot;&gt;&lt;/a&gt;字符串处理累 strman-java&lt;/h2&gt;&lt;p&gt;&lt;a hre
-    
-    </summary>
-    
-    
-      <category term="java" scheme="http://www.rocyuan.com/tags/java/"/>
-    
-      <category term="工具" scheme="http://www.rocyuan.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
